@@ -15,7 +15,7 @@ private int amountStudentsStratum1and2;
 private int totalAmountActivesStudent;
 
 
-public EducationsCompany(String nameComercy,String nit, String addres,String phoneContact, int employeerCant, double amountActives, char typeOrganization, String legalName,){
+public EducationsCompany(String nameComercy,String nit, String addres,String phoneContact, int employeerCant, double amountActives, char typeOrganization, String legalName, String numberRegistrationMEN,int numberYearsAcreditation,int nationalPositionSaber11,int nationalPositionSaberPro,String rectorName,String educativeSector,int amountStudentsStratum1and2, int totalAmountActivesStudent){
 super(nameComercy,nit,addres,phoneContact,employeerCant,amountActives,typeOrganization,legalName);
 this.numberRegistrationMEN = numberRegistrationMEN;
 this.numberYearsAcreditation = numberYearsAcreditation;
