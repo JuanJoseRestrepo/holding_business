@@ -1,4 +1,5 @@
 package model;
+import java.util.ArrayList;
 
 public class Product{
 
@@ -8,6 +9,7 @@ private double waterAmount;
 private int numberUnities;
 
 private Invima invima;
+private ArrayList<FoodCompany> registrationFood;
 
 public Product(String nameProduct, long identify, double waterAmount, int numberUnities,Invima invima){
   this.nameProduct = nameProduct;
@@ -15,6 +17,7 @@ public Product(String nameProduct, long identify, double waterAmount, int number
   this.waterAmount = waterAmount;
   this.numberUnities = numberUnities;
   this.invima = invima;
+  registrationFood = new ArrayList<registrationFood>();
 }
 
 
