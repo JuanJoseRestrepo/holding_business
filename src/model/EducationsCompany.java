@@ -1,6 +1,6 @@
 package model;
 
-public class EducationsCompany extends ServiceCompany{
+public class EducationsCompany extends ServiceCompany implements Taxes{
 
 public static final String HIGH_SCHOOL = "Bachillerato" ;
 public static final String UNIVERSITY = "Universidad" ;
@@ -25,6 +25,12 @@ this.rectorName = rectorName;
 this.educativeSector = educativeSector;
 this.amountStudentsStratum1and2 = amountStudentsStratum1and2;
 this.totalAmountActivesStudent = totalAmountActivesStudent;
+}
+
+public double calculatedProCultura(){
+double porcentaje = 0.0;
+
+return porcentaje;
 }
 
 
