@@ -1,6 +1,6 @@
 package model;
 
-public class Invima{
+public class Invima extends ManufacturingCompany{
 
 public static final char FABRICATION_EXPO = 'X';
 public static final char FABRICATION_SELL = 'Y';
@@ -13,7 +13,8 @@ private String state;
 private String expiration;
 private char modality;
 
-public Invima(String sanitaryRegistration, String state, String expiration, char modality){
+public Invima(String nameComercy,String nit, String addres,String phoneContact, int employeerCant, double amountActives, char typeOrganization, String legalName,String sanitaryRegistration, String state, String expiration, char modality){
+  super(nameComercy,nit,addres,phoneContact,employeerCant,amountActives,typeOrganization,legalName);
   this.sanitaryRegistration = sanitaryRegistration;
   this.state = state;
   this.expiration = expiration;

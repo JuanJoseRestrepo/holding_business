@@ -8,16 +8,12 @@ private long identify;
 private double waterAmount;
 private int numberUnities;
 
-private Invima invima;
-private ArrayList<FoodCompany> registrationFood;
 
-public Product(String nameProduct, long identify, double waterAmount, int numberUnities,Invima invima){
+public Product(String nameProduct, long identify, double waterAmount, int numberUnities){
   this.nameProduct = nameProduct;
   this.identify = identify;
   this.waterAmount = waterAmount;
   this.numberUnities = numberUnities;
-  this.invima = invima;
-  registrationFood = new ArrayList<registrationFood>();
 }
 
 
