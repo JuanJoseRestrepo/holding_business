@@ -30,6 +30,14 @@ this.totalAmountActivesStudent = totalAmountActivesStudent;
 public double calculatedProCultura(){
 double porcentaje = 0.0;
 
+porcentaje += 20 - ( amountStudentsStratum1and2/100);
+
+if(porcentaje < 0){
+
+porcejae = 0.0;
+
+}
+
 return porcentaje;
 }
 

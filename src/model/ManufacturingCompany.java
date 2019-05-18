@@ -11,7 +11,26 @@ super(nameComercy,nit,addres,phoneContact,employeerCant,amountActives,typeOrgani
 products = new ArrayList<Product>();
 }
 
+public int serviceWaterxTree(){
 
+int amountTree = 0.0;
+
+for(int i = 0; i < products.size(); i++){
+  Product m = products.get(i);
+  if(){
+
+  }else if(){
+
+  }else if(){
+
+  }
+}
+
+
+
+return amountTree;
+
+}
 
 
 
