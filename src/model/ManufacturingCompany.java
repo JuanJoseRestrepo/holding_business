@@ -13,20 +13,24 @@ products = new ArrayList<Product>();
 
 public int serviceWaterxTree(){
 
-int amountTree = 0.0;
+int amountTree = 0;
 
 for(int i = 0; i < products.size(); i++){
   Product m = products.get(i);
-  if(){
+  if(m.getWaterAmount() > 1 && m.getWaterAmount() < 140){
 
-  }else if(){
+    amountTree = 6;
 
-  }else if(){
+    }else if(m.getWaterAmount() > 141 && m.getWaterAmount() < 800){
 
-  }
-}
+      amountTree = 25;
 
+      }else if(m.getWaterAmount() > 800){
 
+          amountTree = 200;
+
+        }
+      }
 
 return amountTree;
 

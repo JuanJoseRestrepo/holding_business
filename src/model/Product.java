@@ -5,11 +5,11 @@ public class Product{
 
 private String nameProduct;
 private long identify;
-private double waterAmount;
+private int waterAmount;
 private int numberUnities;
 
 
-public Product(String nameProduct, long identify, double waterAmount, int numberUnities){
+public Product(String nameProduct, long identify, int waterAmount, int numberUnities){
   this.nameProduct = nameProduct;
   this.identify = identify;
   this.waterAmount = waterAmount;
@@ -32,11 +32,11 @@ public void setIdentify(long identify){
   this.identify = identify;
 }
 
-public double getWaterAmount(){
+public int getWaterAmount(){
   return waterAmount;
 }
 
-public void setWaterAmount(double waterAmount){
+public void setWaterAmount(int waterAmount){
   this.waterAmount = waterAmount;
 }
 
