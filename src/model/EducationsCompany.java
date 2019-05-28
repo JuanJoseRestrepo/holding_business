@@ -27,6 +27,72 @@ this.amountStudentsStratum1and2 = amountStudentsStratum1and2;
 this.totalAmountActivesStudent = totalAmountActivesStudent;
 }
 
+public String getNumberRegistrationMEN(){
+  return numberRegistrationMEN;
+}
+
+public void setNumberRegistrationMEN(String numberRegistrationMEN){
+  this.numberRegistrationMEN = numberRegistrationMEN;
+}
+
+public int getNumberYearsAcreditation(){
+  return numberYearsAcreditation;
+}
+
+public void setNumberYearsAcreditation(int numberYearsAcreditation){
+  this.numberYearsAcreditation = numberYearsAcreditation;
+}
+
+public int getNationalPositionSaber11(){
+  return nationalPositionSaber11;
+}
+
+public void setNationalPositionSaber11(int nationalPositionSaber11){
+  this.nationalPositionSaber11 = nationalPositionSaber11;
+}
+
+public int getNationalPositionSaberPro(){
+  return nationalPositionSaberPro;
+}
+
+public void setNationalPositionSaberPro(int nationalPositionSaberPro){
+  this.nationalPositionSaberPro = nationalPositionSaberPro;
+}
+
+public String getRectorName(){
+  return rectorName;
+}
+
+public void setRectorName(String rectorName){
+  this.rectorName = rectorName;
+}
+
+public String getEducativeSector(){
+  return educativeSector;
+}
+
+public void setEducativeSector(String educativeSector){
+  this.educativeSector = educativeSector;
+}
+
+public int getAmountStudentsStratum1and2(){
+  return amountStudentsStratum1and2;
+}
+
+public void setAmountStudentsStratum1and2(int amountStudentsStratum1and2){
+  this.amountStudentsStratum1and2 = amountStudentsStratum1and2;
+}
+
+public int getTotalAmountActivesStudent(){
+  return totalAmountActivesStudent;
+}
+
+public void setTotalAmountActivesStudent(int totalAmountActivesStudent){
+  this.totalAmountActivesStudent = totalAmountActivesStudent;
+}
+
+
+
 public double calculatedProCultura(){
 double porcentaje = 0.0;
 

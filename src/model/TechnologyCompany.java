@@ -1,7 +1,7 @@
 package model;
 import java.util.ArrayList;
 
-public class TechnologyCompany extends ServiceCompany{
+public class TechnologyCompany extends ServiceCompany implements Consuptiom{
 
 //Constantes
 
@@ -14,16 +14,17 @@ public static final String PLATAFORM_SER = "Plataforma como servicio";
 //Atributo
 
 private String service;
-
+private int consuptiomKilowatts;
 
 //Relaciones
 
 private ArrayList<String> services;
 
 
-public TechnologyCompany(String nameComercy,String nit, String addres,String phoneContact, int employeerCant, double amountActives, char typeOrganization, String legalName){
+public TechnologyCompany(String nameComercy,String nit, String addres,String phoneContact, int employeerCant, double amountActives, char typeOrganization, String legalName,String service,int consuptiomKilowatts){
   super(nameComercy,nit,addres,phoneContact,employeerCant,amountActives,typeOrganization,legalName);
 	this.service = service;
+  this.consuptiomKilowatts = consuptiomKilowatts;
 	services = new ArrayList<String>();
 	services.add(CAPATATION_CONSULT);
 	services.add(SOFTWARE_DEVELOP);
@@ -33,7 +34,43 @@ public TechnologyCompany(String nameComercy,String nit, String addres,String pho
 
 }
 
+public String getService(){
+  return service;
+}
 
+public void setService(String service){
+  this.service = service;
+}
+
+public int getConsuptiomKilowatts(){
+  return consuptiomKilowatts;
+}
+
+public void setConsuptiomKilowatts(int consuptiomKilowatts){
+  this.consuptiomKilowatts = consuptiomKilowatts;
+}
+
+public int calculatedThingXArbol(){
+
+int amountTreeEnergy = 0;
+
+  if(getConsuptiomKilowatts() > 1 && getConsuptiomKilowatts() < 1000){
+
+    amountTreeEnergy = 8;
+
+  }else if(getConsuptiomKilowatts() > 10001 && getConsuptiomKilowatts() < 3000){
+
+      amountTreeEnergy = 35;
+
+    }else if(getConsuptiomKilowatts() > 3000){
+
+          amountTreeEnergy = 500;
+
+        }
+
+return amountTreeEnergy;
+
+}
 
 
 

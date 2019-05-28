@@ -11,6 +11,14 @@ super(nameComercy,nit,addres,phoneContact,employeerCant,amountActives,typeOrgani
 products = new ArrayList<Product>();
 }
 
+public ArrayList<Product> getProducts(){
+  return products;
+}
+
+public void setProducts(ArrayList<Product> products){
+  this.products = products;
+}
+
 public int serviceWaterxTree(){
 
 int amountTree = 0;

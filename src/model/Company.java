@@ -32,7 +32,69 @@ public Company(String nameComercy,String nit, String addres,String phoneContact,
   this.legalName = legalName;
 }
 
+public String getNameComercy(){
+  return nameComercy;
+}
 
+public void setNameComercy(String nameComercy){
+  this.nameComercy = nameComercy;
+}
+
+public String getNit(){
+  return nit;
+}
+
+public void setNit(String nit){
+  this.nit = nit;
+}
+
+public String getAddres(){
+  return addres;
+}
+
+public void setAddres(String addres){
+  this.addres = addres;
+}
+
+public String getPhoneContact(){
+  return phoneContact;
+}
+
+public void setPhoneContact(String phoneContact){
+  this.phoneContact = phoneContact;
+}
+
+public int getEmployeerCant(){
+  return employeerCant;
+}
+
+public void setEmployeerCant(int employeerCant){
+  this.employeerCant = employeerCant;
+}
+
+public double getAmountActives(){
+  return amountActives;
+}
+
+public void setAmountActives(double amountActives){
+  this.amountActives = amountActives;
+}
+
+public char getTypeOrganization(){
+  return typeOrganization;
+}
+
+public void setTypeOrganization(char typeOrganization){
+  this.typeOrganization = typeOrganization;
+}
+
+public String getLegalName(){
+  return legalName;
+}
+
+public void setLegalName(String legalName){
+  this.legalName = legalName;
+}
 
 
 }

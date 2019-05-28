@@ -17,7 +17,29 @@ this.maker = maker;
 this.conservation = conservation;
 }
 
+public String getImporter(){
+  return importer;
+}
 
+public void setImporter(String importer){
+  this.importer = importer;
+}
+
+public String getMaker(){
+  return maker;
+}
+
+public void setMaker(String maker){
+  this.maker = maker;
+}
+
+public String getConservation(){
+  return conservation;
+}
+
+public void setConservation(String conservation){
+  this.conservation = conservation;
+}
 
 
 }
