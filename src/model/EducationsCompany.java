@@ -15,8 +15,8 @@ private int amountStudentsStratum1and2;
 private int totalAmountActivesStudent;
 
 
-public EducationsCompany(String nameComercy,String nit, String addres,String phoneContact, int employeerCant, double amountActives, char typeOrganization, String legalName, String numberRegistrationMEN,int numberYearsAcreditation,int nationalPositionSaber11,int nationalPositionSaberPro,String rectorName,String educativeSector,int amountStudentsStratum1and2, int totalAmountActivesStudent){
-super(nameComercy,nit,addres,phoneContact,employeerCant,amountActives,typeOrganization,legalName);
+public EducationsCompany(String nameComercy,String nit, String addres,String phoneContact, int employeerCant, double amountActives, String dateOfInscription, char typeOrganization, String legalName, String numberRegistrationMEN,int numberYearsAcreditation,int nationalPositionSaber11,int nationalPositionSaberPro,String rectorName,String educativeSector,int amountStudentsStratum1and2, int totalAmountActivesStudent){
+super(nameComercy,nit,addres,phoneContact,employeerCant,amountActives,dateOfInscription,typeOrganization,legalName);
 this.numberRegistrationMEN = numberRegistrationMEN;
 this.numberYearsAcreditation = numberYearsAcreditation;
 this.nationalPositionSaber11 = nationalPositionSaber11;
@@ -113,6 +113,9 @@ msj += "El numero de estudiantes en estratos uno y dos son:" + amountStudentsStr
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
 msj += "El numero de total de estudiantes es:" +totalAmountActivesStudent;
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
+msj += "El impuesto de procultura es:" + calculatedProCultura();
+msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
+
 
 return msj;
 

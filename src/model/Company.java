@@ -12,24 +12,34 @@ public static final char TRANSPORTATION_A_C = 'G';
 public static final char SECURE_INMU_COM = 'H';
 public static final char SOCI_COM = 'I';
 
-protected String nameComercy;
-protected String nit;
-protected String addres;
-protected String phoneContact;
-protected int employeerCant;
-protected double amountActives;
-protected char typeOrganization;
-protected String legalName;
+private  String nameComercy;
+private String nit;
+private String addres;
+private String phoneContact;
+private int employeerCant;
+private double amountActives;
+private String dateOfInscription;
+private char typeOrganization;
+private String legalName;
 
-public Company(String nameComercy,String nit, String addres,String phoneContact, int employeerCant, double amountActives, char typeOrganization, String legalName ){
+public Company(String nameComercy,String nit, String addres,String phoneContact, int employeerCant, double amountActives, String dateOfInscription, char typeOrganization, String legalName ){
   this.nameComercy = nameComercy;
   this.nit = nit;
   this.addres = addres;
   this.phoneContact = phoneContact;
   this.employeerCant = employeerCant;
   this.amountActives = amountActives;
+  this.dateOfInscription = dateOfInscription;
   this.typeOrganization = typeOrganization;
   this.legalName = legalName;
+}
+
+public String getDateOfInscription(){
+  return dateOfInscription;
+}
+
+public void setDateOfInscription(String dateOfInscription){
+  this.dateOfInscription = dateOfInscription;
 }
 
 public String getNameComercy(){

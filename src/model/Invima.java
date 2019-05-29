@@ -1,6 +1,6 @@
 package model;
 
-public class Invima extends ManufacturingCompany{
+public class Invima extends ManufacturingCompany implements Consuptiom{
 
 public static final char FABRICATION_EXPO = 'X';
 public static final char FABRICATION_SELL = 'Y';
@@ -13,8 +13,8 @@ private String state;
 private String expiration;
 private char modality;
 
-public Invima(String nameComercy,String nit, String addres,String phoneContact, int employeerCant, double amountActives, char typeOrganization, String legalName,String sanitaryRegistration, String state, String expiration, char modality){
-  super(nameComercy,nit,addres,phoneContact,employeerCant,amountActives,typeOrganization,legalName);
+public Invima(String nameComercy,String nit, String addres,String phoneContact, int employeerCant, double amountActives, String dateOfInscription, char typeOrganization, String legalName,String sanitaryRegistration, String state, String expiration, char modality){
+super(nameComercy,nit,addres,phoneContact,employeerCant,amountActives,dateOfInscription,typeOrganization,legalName);
   this.sanitaryRegistration = sanitaryRegistration;
   this.state = state;
   this.expiration = expiration;
@@ -67,6 +67,7 @@ msj += "La expiracion es:" + expiration;
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
 msj += "La modalidad es:" + modality;
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
+msj += "Los arboles a plantar son:" + calculatedThingXArbol();
 
 return msj;
 
@@ -74,7 +75,7 @@ return msj;
 }
 
 
-public int serviceWaterxTree(){
+public int calculatedThingXArbol(){
 
 int amountTree = 0;
 

@@ -1,6 +1,6 @@
 package model;
 
-public class PublicCompany extends ServiceCompany{
+public class PublicCompany extends ServiceCompany implements Taxes{
 
 public static final String SAWAGE_SYSTEM = "Alcantarillado" ;
 public static final String ENERGY = "Energia" ;
@@ -10,9 +10,9 @@ private String servicePublic;
 private int suscriptorsTotally;
 private int suscriptorsOneAndTwo;
 
-public PublicCompany(String nameComercy,String nit, String addres,String phoneContact, int employeerCant, double amountActives, char typeOrganization, String legalName,String servicePublic,int suscriptorsTotally, int suscriptorsOneAndTwo){
+public PublicCompany(String nameComercy,String nit, String addres,String phoneContact, int employeerCant, double amountActives, String dateOfInscription, char typeOrganization, String legalName,String servicePublic,int suscriptorsTotally, int suscriptorsOneAndTwo){
 
-super(nameComercy,nit,addres,phoneContact,employeerCant,amountActives,typeOrganization,legalName);
+super(nameComercy,nit,addres,phoneContact,employeerCant,amountActives,dateOfInscription,typeOrganization,legalName);
 this.servicePublic = servicePublic;
 this.suscriptorsTotally = suscriptorsTotally;
 this.suscriptorsOneAndTwo = suscriptorsOneAndTwo;
@@ -55,8 +55,27 @@ msj += "El total de suscriptores es:" + suscriptorsTotally;
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
 msj += "La cantidad de suscriptores uno y dos es:" +suscriptorsOneAndTwo;
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
+msj += "El impuesto proCultura es:" + calculatedProCultura();
+msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
 
 return msj;
+
+
+}
+
+public double calculatedProCultura(){
+
+double porProCultura = 0.0;
+
+porProCultura += 40 - (suscriptorsTotally/100);
+
+if(porProCultura < 0){
+
+porProCultura = 0.0;
+
+}
+
+return porProCultura;
 
 
 }
