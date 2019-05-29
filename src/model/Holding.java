@@ -11,13 +11,20 @@ public Holding(){
 companies = new ArrayList<Company>();
 }
 
-public void addCompany(){
+public void addCompany(Company m){
+
+  companies.add(m);
 
 }
 
 public String showInfo(){
 String msj = "";
 
+for(int i = 0; i < companies.size(); i++){
+
+msj += companies.get(i).toString();
+
+}
 return msj;
 }
 

@@ -91,6 +91,35 @@ public void setTotalAmountActivesStudent(int totalAmountActivesStudent){
   this.totalAmountActivesStudent = totalAmountActivesStudent;
 }
 
+public String toString(){
+String msj = "";
+
+msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
+msj += super.toString();
+msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
+msj += "El numero de registro es:" + numberRegistrationMEN;
+msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
+msj += "Los años de acreditacion es:" + numberYearsAcreditation;
+msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
+msj += "El puesto en las pruebas 11 es:" + nationalPositionSaber11;
+msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
+msj += "El puesto de las pruebas Pro es:" + nationalPositionSaberPro;
+msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
+msj += "El nombre del rector es:" +rectorName;
+msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
+msj += "El sector educativo es:" + educativeSector;
+msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
+msj += "El numero de estudiantes en estratos uno y dos son:" + amountStudentsStratum1and2;
+msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
+msj += "El numero de total de estudiantes es:" +totalAmountActivesStudent;
+msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
+
+return msj;
+
+
+}
+
+
 
 
 public double calculatedProCultura(){

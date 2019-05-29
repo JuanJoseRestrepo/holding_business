@@ -96,5 +96,7 @@ public void setLegalName(String legalName){
   this.legalName = legalName;
 }
 
+public abstract String toString();
+
 
 }
