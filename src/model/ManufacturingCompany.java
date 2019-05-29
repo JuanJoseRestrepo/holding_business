@@ -19,30 +19,11 @@ public void setProducts(ArrayList<Product> products){
   this.products = products;
 }
 
-public int serviceWaterxTree(){
+public void addProduct(Product pro){
 
-int amountTree = 0;
-
-for(int i = 0; i < products.size(); i++){
-  Product m = products.get(i);
-  if(m.getWaterAmount() > 1 && m.getWaterAmount() < 140){
-
-    amountTree = 6;
-
-    }else if(m.getWaterAmount() > 141 && m.getWaterAmount() < 800){
-
-      amountTree = 25;
-
-      }else if(m.getWaterAmount() > 800){
-
-          amountTree = 200;
-
-        }
-      }
-
-return amountTree;
-
+  products.add(pro);
 }
+
 
 
 

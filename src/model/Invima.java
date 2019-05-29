@@ -53,5 +53,30 @@ public void setModality(char modality){
   this.modality = modality;
 }
 
+public int serviceWaterxTree(){
+
+int amountTree = 0;
+
+for(int i = 0; i < getProducts().size(); i++){
+  Product m = getProducts().get(i);
+  if(m.getWaterAmount() > 1 && m.getWaterAmount() < 140){
+
+    amountTree = 6;
+
+    }else if(m.getWaterAmount() > 141 && m.getWaterAmount() < 800){
+
+      amountTree = 25;
+
+      }else if(m.getWaterAmount() > 800){
+
+          amountTree = 200;
+
+        }
+      }
+
+return amountTree;
+
+}
+
 
 }
