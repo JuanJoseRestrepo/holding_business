@@ -154,8 +154,18 @@ public void showMenu(){
 
         System.out.println("Digite el nombre legal");
         String legalName2 = reader.nextLine();
+		
+		System.out.println("Digite el tipo de servicio + " + TechnologyCompany.CAPATATION_CONSULT + "" + TechnologyCompany.SOFTWARE_DEVELOP + "" + TechnologyCompany.INFRASTRUCTURE_SER + "" + TechnologyCompany.SOFTWARE_SER + "" + TechnologyCompany.PLATAFORM_SER);
+		String serviceTechno = reader.nextLine();
+		
+		System.out.println("Digite el consumo de kilowatts");
+		int killowatts = reader.nextDouble();
+		reader.nextLine();
+	  
+		Company n = new TechnologyCompany(comerName2,nit2,addres2,phoneContact2,employeerCant2,amountActives2,dateOfInscription2,typeOrganization2,legalName2,serviceTechno,killowatts);
 
-
+		principal.addCompany(n);
+		
       }else if(userSelection == 3){
 
         System.out.println("Digite el nombre del comercio");
@@ -186,7 +196,21 @@ public void showMenu(){
 
         System.out.println("Digite el nombre legal");
         String legalName3 = reader.nextLine();
-
+		
+		System.out.println("Digite el servicio de la empresa publica" + PublicCompany.SAWAGE_SYSTEM + "" + PublicCompany.ENERGY + "" + PublicCompany.AQUEDUCT);
+		String namePublic = reader.nextLine();
+		
+		System.out.println("Digite la cantidad de suscriptores total");
+	    int suscriptorsTotal = reader.nextInt();
+		reader.nextLine();
+		
+		System.out.println("Digite la cantidad de suscriptores 1 y 2 ");
+		int suscriptors1and2 = reader.nextInt();
+		reader.nextLine();
+		
+		Company b = new TechnologyCompany(comerName3,nit3,addres3,phoneContact3,employeerCant3,amountActives3,dateOfInscription3,typeOrganization3,legalName3,namePublic,suscriptorsTotal,suscriptors1and2);
+		
+		principal.addCompany(b);
 
       }else if(userSelection == 4){
 
