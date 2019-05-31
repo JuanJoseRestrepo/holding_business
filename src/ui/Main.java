@@ -158,11 +158,7 @@ public void showMenu(){
 		System.out.println("Digite el tipo de servicio + " + TechnologyCompany.CAPATATION_CONSULT + "" + TechnologyCompany.SOFTWARE_DEVELOP + "" + TechnologyCompany.INFRASTRUCTURE_SER + "" + TechnologyCompany.SOFTWARE_SER + "" + TechnologyCompany.PLATAFORM_SER);
 		String serviceTechno = reader.nextLine();
 		
-		System.out.println("Digite el consumo de kilowatts");
-		int killowatts = reader.nextDouble();
-		reader.nextLine();
-	  
-		Company n = new TechnologyCompany(comerName2,nit2,addres2,phoneContact2,employeerCant2,amountActives2,dateOfInscription2,typeOrganization2,legalName2,serviceTechno,killowatts);
+		Company n = new TechnologyCompany(comerName2,nit2,addres2,phoneContact2,employeerCant2,amountActives2,dateOfInscription2,typeOrganization2,legalName2,serviceTechno)
 
 		principal.addCompany(n);
 		
@@ -242,6 +238,17 @@ public void showMenu(){
 
         System.out.println("Digite el nombre legal");
         String legalName4 = reader.nextLine();
+		
+		System.out.println("Digite cuantos productos necesita");
+		int numberProducts = reader.nextInt();
+		
+		for(int i = 0; i < numberProducts;i ++){
+			
+			System.out.println("");
+			
+			
+			
+		}
 
 
       }else if(userSelection == 5){
@@ -301,7 +308,7 @@ public void showMenu(){
 
     principal = new Holding();
 
-    Company techno = new TechnologyCompany("UbisoftSoftware","123330133","Sucre","3104898989",12,139.1,"2019-03-01", Company.SECURE_INMU_COM, "Bugisoft", TechnologyCompany.SOFTWARE_DEVELOP, 1233);
+    Company techno = new TechnologyCompany("UbisoftSoftware","123330133","Sucre","3104898989",12,139.1,"2019-03-01", Company.SECURE_INMU_COM, "Bugisoft", TechnologyCompany.SOFTWARE_DEVELOP);
     principal.addCompany(techno);
 
   }

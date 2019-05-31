@@ -28,6 +28,22 @@ msj += companies.get(i).toString();
 return msj;
 }
 
+public void addCompanyProducts(Comapny k,){
+	
+	for(int i = 0; i < companies.size();i++){
+		
+		if(companies.get(i) instaceOf ManufacturingCompany){
+			
+			k.
+			companies.add(k);
+			
+			
+		}
+		
+	}
+	
+}
+
 
 
 

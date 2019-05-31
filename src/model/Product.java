@@ -5,11 +5,10 @@ public class Product{
 
 private String nameProduct;
 private long identify;
-private int waterAmount;
 private int numberUnities;
 
 
-public Product(String nameProduct, long identify, int waterAmount, int numberUnities){
+public Product(String nameProduct, long identify, int numberUnities){
   this.nameProduct = nameProduct;
   this.identify = identify;
   this.waterAmount = waterAmount;
@@ -32,14 +31,6 @@ public void setIdentify(long identify){
   this.identify = identify;
 }
 
-public int getWaterAmount(){
-  return waterAmount;
-}
-
-public void setWaterAmount(int waterAmount){
-  this.waterAmount = waterAmount;
-}
-
 public int getNumberUnities(){
   return numberUnities;
 }
@@ -58,8 +49,6 @@ msj += "------------------------------------------------------------------------
 msj += "El nombre del producto es:"+ nameProduct;
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
 msj += "La identificacion es:"+ identify;
-msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
-msj += "El acumulado de agua es:"+ waterAmount;
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
 msj += "El numero de unidades es:"+ numberUnities;
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
