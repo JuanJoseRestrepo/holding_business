@@ -19,9 +19,10 @@ public void setProducts(ArrayList<Product> products){
   this.products = products;
 }
 
-public void addProduct(Product pro){
+public void addProduct(ArrayList<Product> pro){
 
-  products.add(pro);
+products = pro;
+
 }
 
 public String toString(){

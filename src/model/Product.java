@@ -11,7 +11,6 @@ private int numberUnities;
 public Product(String nameProduct, long identify, int numberUnities){
   this.nameProduct = nameProduct;
   this.identify = identify;
-  this.waterAmount = waterAmount;
   this.numberUnities = numberUnities;
 }
 

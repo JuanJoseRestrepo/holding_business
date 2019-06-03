@@ -28,20 +28,20 @@ msj += companies.get(i).toString();
 return msj;
 }
 
-public void addCompanyProducts(Comapny k,){
-	
+public void addCompanyProducts(Company k,ArrayList<Product> l){
+
 	for(int i = 0; i < companies.size();i++){
-		
-		if(companies.get(i) instaceOf ManufacturingCompany){
-			
-			k.
+
+		if(companies.get(i) instanceof ManufacturingCompany){
+
 			companies.add(k);
-			
-			
+      k.addProduct(l);
+
+
 		}
-		
+
 	}
-	
+
 }
 
 

@@ -40,19 +40,19 @@ public void setService(String service){
   this.service = service;
 }
 
-public int calculatedThingXArbol(){
+public int calculatedThingXArbol(int consuptiomKilowatts){
 
 int amountTreeEnergy = 0;
 
-  if(getConsuptiomKilowatts() > 1 && getConsuptiomKilowatts() < 1000){
+  if(consuptiomKilowatts > 1 && consuptiomKilowatts < 1000){
 
     amountTreeEnergy = 8;
 
-  }else if(getConsuptiomKilowatts() > 1001 && getConsuptiomKilowatts() < 3000){
+  }else if(consuptiomKilowatts > 1001 && consuptiomKilowatts < 3000){
 
       amountTreeEnergy = 35;
 
-    }else if(getConsuptiomKilowatts() > 3000){
+    }else if(consuptiomKilowatts > 3000){
 
           amountTreeEnergy = 500;
 
@@ -69,10 +69,6 @@ msj += "------------------------------------------------------------------------
 msj += super.toString();
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
 msj += "El servicio es:" + service;
-msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
-msj += "El consumo de kilowatts es:" + consuptiomKilowatts;
-msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
-msj += "Los arboles a plantar son:" + calculatedThingXArbol();
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
 
 return msj;
