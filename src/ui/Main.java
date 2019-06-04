@@ -238,20 +238,48 @@ public void showMenu(){
         System.out.println("Digite la fecha en formato AAAA-MM-DD");
         String dateOfInscription4 = reader.nextLine();
 
-        System.out.println("Digite el tipo de organizacion" + "Agricultura,caza,silvestre y pescadera:" +Company.AGRICUL_HUNT_SILV_FISH + "//" + "Explotacion de minas:" + Company.EXPLOT_MINES_CAN + "//" + "Industria de manufactura:" + Company.INDUSTRY_MANU + "//" + "Electricidad,gas y vapos:" + Company.ELECTRICITY_GAS_STEAM + "//" + "construcion:" + Company.CONSTRUCTION + "//" + "Comercio al mayor y menor" + Company.COMERCY_MM + "//" + "Transporte,almacenamiento y Comunicaciones" + Company.TRANSPORTATION_A_C + "//" + "Seguros,inmuebles" + Company.SECURE_INMU_COM + "//" + "Comunales,sociales" + Company.SOCI_COM);
+        System.out.println("Digite el tipo de organizacion:" + "//" + "Agricultura,caza,silvestre y pescadera:" +Company.AGRICUL_HUNT_SILV_FISH + "//" + "Explotacion de minas:" + Company.EXPLOT_MINES_CAN + "//" + "Industria de manufactura:" + Company.INDUSTRY_MANU + "//" + "Electricidad,gas y vapos:" + Company.ELECTRICITY_GAS_STEAM + "//" + "construcion:" + Company.CONSTRUCTION + "//" + "Comercio al mayor y menor" + Company.COMERCY_MM + "//" + "Transporte,almacenamiento y Comunicaciones" + Company.TRANSPORTATION_A_C + "//" + "Seguros,inmuebles" + Company.SECURE_INMU_COM + "//" + "Comunales,sociales" + Company.SOCI_COM);
         char typeOrganization4 = reader.nextLine().charAt(0);
 
         System.out.println("Digite el nombre legal");
         String legalName4 = reader.nextLine();
 
-		System.out.println("Digite cuantos productos necesita");
-		int numberProducts = reader.nextInt();
+        System.out.println("Digite el importador");
+        String impor = reader.nextLine();
 
-		for(int i = 0; i < numberProducts;i ++){
+        System.out.println("Digite el productor");
+        String mak = reader.nextLine();
 
-			System.out.println("");
+        System.out.println("Digite la conservacion" + "/" + FoodCompany.ROOM_TEMPERATURE + "/" + FoodCompany.REFRIGERATION + "/" + FoodCompany.FREEZER);
+        String con = reader.nextLine();
 
+        Company z = new FoodCompany(comerName4,nit4,addres4,phoneContact4,employeerCant4,amountActives4,dateOfInscription4,typeOrganization4,legalName4,impor,mak,con);
 
+		    System.out.println("Digite cuantos productos necesita");
+		    int numberProducts = reader.nextInt();
+
+        ArrayList<Product> l = new ArrayList<Product>();
+
+		    for(int i = 0; i < numberProducts;i++){
+
+			System.out.println("Digite el nombre del producto");
+      String namePro = reader.nextLine();
+
+      System.out.println("Digite la cantidad de agua");
+      int aguaCan = reader.nextInt();
+      reader.nextLine();
+
+      System.out.println("Digite su identificacion");
+      Long identy = reader.nextLong();
+      reader.nextLine();
+
+      System.out.println("Digite el numero de unidades");
+      int unities = reader.nextInt();
+      reader.nextLine();
+
+      Product m = new Product(namePro,aguaCan,identy,unities);
+      l.add(m);
+      principal.addCompanyProducts(z,l);
 
 		}
 
@@ -300,6 +328,7 @@ public void showMenu(){
       }
 
     }
+    /*
 }else if(userImput == 3){
   System.out.println("A continuacion se meustran las siguientes empresas:");
 
@@ -332,7 +361,8 @@ public void showMenu(){
     Poll pollsAll = new Poll(m,z,x);
     client.add(pollsAll);
     principal.addPolls(nameComercy1,client);
-  }else if()
+  }
+  }else if(ls == 2){
 
       for(int k = 0; k < 50; k++){
         System.out.println("Digite el nivel prestado");
@@ -347,24 +377,17 @@ public void showMenu(){
          x = reader.nextInt();
         reader.nextLine();
 
-
-      }
-
-    }
     Poll pollsAll = new Poll(m,z,x);
     client.add(pollsAll);
     principal.addPolls(nameComercy1,client);
-}
-
-
-
+    }
   }
 }
-
 }
+*/
 
-
-
+}//final userImput
+}
 }
 
   public void init(){

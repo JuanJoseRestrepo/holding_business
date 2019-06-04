@@ -17,7 +17,7 @@ boolean abajoL = false;
 for(int i = 0;  i < tower.length; i++){
     if(tower[i][k].getNameEmployeer().equals(nameEmpleado)){
 
-      msj = "El empleado es" + tower[i][k].getNameEmployeer();
+      msj = "El empleado es" + tower[i][k].getExtension();
       }
     abajoL = true;
   }
@@ -27,7 +27,7 @@ for(int i = 0;  i < tower.length; i++){
       int large = tower.length-1;
       if(tower[large][k].getNameEmployeer().equals(nameEmpleado)){
 
-            msj = "El empleado es" + tower[large][k].getNameEmployeer();
+            msj = "El empleado es" + tower[large][k].getExtension();
     }
 
 
@@ -45,22 +45,22 @@ public String recorridoZ(String nombreEmpleado){
 
 String msj = "";
 
-for(int i =0; i < tower.length; i++){
+for(int i =0; i < tower[0].length; i++){
     if(tower[0][i].getNameEmployeer().equals(nombreEmpleado)){
-      msj = "El empleado es" + tower[0][i].getNameEmployeer();
+      msj = "El empleado es" + tower[0][i].getExtension();
 }
 }
 
 for(int k = 1; k < tower[0].length;k++){
       if(tower[k][tower[0].length-k].getNameEmployeer().equals(nombreEmpleado)){
-          msj = "El empleado es" + tower[k][tower[0].length-k].getNameEmployeer();
+          msj = "El empleado es" + tower[k][tower[0].length-k].getExtension();
 }
 
 }
 
 for(int j= tower[0].length -1; j >0 ; j--){
   if(tower[tower.length][j].getNameEmployeer().equals(nombreEmpleado)){
-    msj = "El empleado es:" + tower[tower.length][j].getNameEmployeer();
+    msj = "El empleado es:" + tower[tower.length][j].getExtension();
   }
 }
 return msj;
@@ -74,17 +74,62 @@ for(int i = 0; i < tower.length;i++,b--){
   for(int k = 0; k < tower[0].length;k++){
     if(i == k){
       if(tower[i][k].getNameEmployeer().equals(nombreEmpleado)){
-      msj += "El empleado es:" + tower[i][k].getNameEmployeer();
+      msj += "El empleado es:" + tower[i][k].getExtension();
     }else if(tower[i][b].getNameEmployeer().equals(nombreEmpleado)){
-      msj += "El empleado es:" + tower[i][b].getNameEmployeer();
+      msj += "El empleado es:" + tower[i][b].getExtension();
     }
     }
   }
 
 }
-
-
 return msj;
+}
+
+public String espiralE(String nombreEmpleado){
+String msj = "";
+
+for(int i = 0; i < tower.length;i++){
+if(1 % 2 != 0){
+  for(int j = 0; j < tower[0].length;j++){
+    if(tower[i][j].getNameEmployeer().equals(nombreEmpleado)){
+      msj += "El empleado es:" + tower[i][j].getExtension();
+    }
+  }
+}else if(i % 2 != 0){
+  for(int k = tower[0].length-1; k > 0; k--){
+    if(tower[i][k].getNameEmployeer().equals(nombreEmpleado)){
+      msj += "El empleado es:" + tower[i][k].getExtension();
+    }
+  }
+}
+}
+return msj;
+}
+
+public String espiralO(String nombreEmpleado){
+String msj = "";
+
+for(int i = 0; i < tower[0].length;i++){
+  if(tower[0][i].getNameEmployeer().equals(nombreEmpleado)){
+    msj += "El empleado es:" + tower[0][i].getExtension();
+  }
+}
+
+for(int k = tower[0].length-1; k > 0; k--){
+  if(tower[tower.length][k].getNameEmployeer().equals(nombreEmpleado)){
+    msj += "El empleado es:" + tower[tower.length][k].getExtension();
+  }
+}
+
+for(int o = 0; o < tower.length;o++){
+ if(tower[o][0].getNameEmployeer().equals(nombreEmpleado)){
+   msj += "El empleado es:" +tower[o][0].getExtension();
+ }else if(tower[o][tower[0].length].getNameEmployeer().equals(nombreEmpleado)){
+   msj += "El empleado es:" +tower[o][tower[0].length].getExtension();
+ }
+}
+return msj;
+
 }
 
 public String espiral(String cargo){

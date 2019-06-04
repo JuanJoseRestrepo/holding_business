@@ -31,11 +31,12 @@ return msj;
 
 public void addCompanyProducts(Company k,ArrayList<Product> l){
 
-	for(int i = 0; i < companies.size();i++){
+  companies.add(k);
+  ((ManufacturingCompany) k).addProduct(l);
 
+	for(int i = 0; i < companies.size();i++){
 		if(companies.get(i) instanceof ManufacturingCompany){
-      companies.add(k);
-      ManufacturingCompany m = k.addProduct(l);
+    ((ManufacturingCompany) k).addProduct(l);
 		}
 
 	}
@@ -60,31 +61,33 @@ return msj;
 
 }
 
-public String addPolls(String nameComercy1,ArrayList<Poll> client){
-  String msj = "";
+public ServiceCompany getCompanies(String nombre){
 
-  for(int i = 0; i < companies.size();i++){
+ServiceCompany m = null;
+boolean f = false;
 
-    	if(companies.get(i) instanceof ServiceCompany){
-        if(nameComercy1.equals(companies.get(i))){
+for(int i = 0; i < companies.size() && !f ;i++){
+if(nombre.equals(companies.get(i).getNameComercy())){
+  if(companies.get(i) instanceof TechnologyCompany){
 
-           companies.get(i).addPolls(client);
+    m = companies.get(i);
+    f = true;
+  }else if(companies.get(i) instanceof EducationsCompany){
 
-        }else{
-          msj = "No existe esa empresa";
-        }
+    m = companies.get(i);
+    f = true;
+  }else if(companies.get(i) instanceof PublicCompany){
 
-
-      }
-
-
+    m = companies.get(i);
+    f = true;
   }
-
 
 }
 
+}
 
+return m;
 
-
+}
 
 }
