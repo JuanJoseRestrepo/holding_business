@@ -2,6 +2,7 @@ package ui;
 
 import model.*;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public  class Main{
 
@@ -50,7 +51,7 @@ public void showMenu(){
       System.out.println("3.Empresa publica");
       System.out.println("|||||||||||||||||||||DE MANOFACTURA|||||||||||||||||||||");
       System.out.println("4.Empresa de comida");
-      System.out.println("5.Empresa de comida");
+      System.out.println("5.Empresa de medicamento");
       System.out.println("6.Salir de la creacion");
       System.out.println("||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
       while(userSelection != 6){
@@ -154,14 +155,18 @@ public void showMenu(){
 
         System.out.println("Digite el nombre legal");
         String legalName2 = reader.nextLine();
-		
-		System.out.println("Digite el tipo de servicio + " + TechnologyCompany.CAPATATION_CONSULT + "" + TechnologyCompany.SOFTWARE_DEVELOP + "" + TechnologyCompany.INFRASTRUCTURE_SER + "" + TechnologyCompany.SOFTWARE_SER + "" + TechnologyCompany.PLATAFORM_SER);
-		String serviceTechno = reader.nextLine();
-		
-		Company n = new TechnologyCompany(comerName2,nit2,addres2,phoneContact2,employeerCant2,amountActives2,dateOfInscription2,typeOrganization2,legalName2,serviceTechno)
 
-		principal.addCompany(n);
-		
+		    System.out.println("Digite el tipo de servicio + " + TechnologyCompany.CAPATATION_CONSULT + "" + TechnologyCompany.SOFTWARE_DEVELOP + "" + TechnologyCompany.INFRASTRUCTURE_SER + "" + TechnologyCompany.SOFTWARE_SER + "" + TechnologyCompany.PLATAFORM_SER);
+		    String serviceTechno = reader.nextLine();
+
+        System.out.println("Digite el consumo de consuptiomKilowatts");
+        int consupTiom = reader.nextInt();
+        reader.nextLine();
+
+		     Company n = new TechnologyCompany(comerName2,nit2,addres2,phoneContact2,employeerCant2,amountActives2,dateOfInscription2,typeOrganization2,legalName2,serviceTechno,consupTiom);
+
+		     principal.addCompany(n);
+
       }else if(userSelection == 3){
 
         System.out.println("Digite el nombre del comercio");
@@ -192,20 +197,20 @@ public void showMenu(){
 
         System.out.println("Digite el nombre legal");
         String legalName3 = reader.nextLine();
-		
+
 		System.out.println("Digite el servicio de la empresa publica" + PublicCompany.SAWAGE_SYSTEM + "" + PublicCompany.ENERGY + "" + PublicCompany.AQUEDUCT);
 		String namePublic = reader.nextLine();
-		
+
 		System.out.println("Digite la cantidad de suscriptores total");
 	    int suscriptorsTotal = reader.nextInt();
 		reader.nextLine();
-		
+
 		System.out.println("Digite la cantidad de suscriptores 1 y 2 ");
 		int suscriptors1and2 = reader.nextInt();
 		reader.nextLine();
-		
-		Company b = new TechnologyCompany(comerName3,nit3,addres3,phoneContact3,employeerCant3,amountActives3,dateOfInscription3,typeOrganization3,legalName3,namePublic,suscriptorsTotal,suscriptors1and2);
-		
+
+		Company b = new PublicCompany(comerName3,nit3,addres3,phoneContact3,employeerCant3,amountActives3,dateOfInscription3,typeOrganization3,legalName3,namePublic,suscriptorsTotal,suscriptors1and2);
+
 		principal.addCompany(b);
 
       }else if(userSelection == 4){
@@ -238,16 +243,16 @@ public void showMenu(){
 
         System.out.println("Digite el nombre legal");
         String legalName4 = reader.nextLine();
-		
+
 		System.out.println("Digite cuantos productos necesita");
 		int numberProducts = reader.nextInt();
-		
+
 		for(int i = 0; i < numberProducts;i ++){
-			
+
 			System.out.println("");
-			
-			
-			
+
+
+
 		}
 
 
@@ -295,20 +300,78 @@ public void showMenu(){
       }
 
     }
-}
+}else if(userImput == 3){
+  System.out.println("A continuacion se meustran las siguientes empresas:");
+
+  ArrayList<Poll> client = new ArrayList<Poll>();
+
+  System.out.println("Digite el tipo que quiere: 1.Empresas TechnologyCompany , 2. Empresas ");
+  int mk = reader.nextInt();
+  reader.nextLine();
+
+  if(mk == 1){
+
+  System.out.println("¿Cuantas encuestas quiere realizar?: 1. 10 Encuestas o 2. 50 encuestas");
+  int ls = reader.nextInt();
+  reader.nextLine();
+
+  if(ls == 1){
+  for(int i = 0; i < 10; i++){
+    System.out.println("Digite el nivel prestado");
+    int m = reader.nextInt();
+    reader.nextLine();
+
+    System.out.println("Digite el nivel prestado");
+    int z = reader.nextInt();
+    reader.nextLine();
+
+    System.out.println("Digite el nivel prestado");
+    int x = reader.nextInt();
+    reader.nextLine();
+
+    Poll pollsAll = new Poll(m,z,x);
+    client.add(pollsAll);
+    principal.addPolls(nameComercy1,client);
+  }else if()
+
+      for(int k = 0; k < 50; k++){
+        System.out.println("Digite el nivel prestado");
+         m = reader.nextInt();
+        reader.nextLine();
+
+        System.out.println("Digite el nivel prestado");
+         z = reader.nextInt();
+        reader.nextLine();
+
+        System.out.println("Digite el nivel prestado");
+         x = reader.nextInt();
+        reader.nextLine();
+
+
+      }
 
     }
-
+    Poll pollsAll = new Poll(m,z,x);
+    client.add(pollsAll);
+    principal.addPolls(nameComercy1,client);
+}
 
 
 
   }
+}
+
+}
+
+
+
+}
 
   public void init(){
 
     principal = new Holding();
 
-    Company techno = new TechnologyCompany("UbisoftSoftware","123330133","Sucre","3104898989",12,139.1,"2019-03-01", Company.SECURE_INMU_COM, "Bugisoft", TechnologyCompany.SOFTWARE_DEVELOP);
+    Company techno = new TechnologyCompany("UbisoftSoftware","123330133","Sucre","3104898989",12,139.1,"2019-03-01", Company.SECURE_INMU_COM, "Bugisoft", TechnologyCompany.SOFTWARE_DEVELOP,1333);
     principal.addCompany(techno);
 
   }

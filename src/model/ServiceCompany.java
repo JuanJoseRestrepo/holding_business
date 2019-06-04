@@ -1,10 +1,27 @@
 package model;
 
+import java.util.ArrayList;
+
 public class ServiceCompany extends Company{
 
+//Relaciones
+private ArrayList<Poll> polls;
 
 public ServiceCompany(String nameComercy,String nit, String addres,String phoneContact, int employeerCant, double amountActives, String dateOfInscription, char typeOrganization, String legalName){
 super(nameComercy,nit,addres,phoneContact,employeerCant,amountActives,dateOfInscription,typeOrganization,legalName);
+polls = new ArrayList<Poll>();
+}
+
+public ArrayList<Poll> getPolls(){
+  return polls;
+}
+
+public void setPolls(ArrayList<Poll> polls){
+  this.polls = polls;
+}
+
+public void addPolls(ArrayList<Poll> client){
+  polls = client;
 }
 
 public String toString(){

@@ -14,15 +14,17 @@ public static final String PLATAFORM_SER = "Plataforma como servicio";
 //Atributo
 
 private String service;
+private int consuptiomKilowatts;
 
 //Relaciones
 
 private ArrayList<String> services;
 
 
-public TechnologyCompany(String nameComercy,String nit, String addres,String phoneContact, int employeerCant, double amountActives, String dateOfInscription ,char typeOrganization, String legalName,String service){
+public TechnologyCompany(String nameComercy,String nit, String addres,String phoneContact, int employeerCant, double amountActives, String dateOfInscription ,char typeOrganization, String legalName,String service,int consuptiomKilowatts){
 super(nameComercy,nit,addres,phoneContact,employeerCant,amountActives,dateOfInscription,typeOrganization,legalName);
 	this.service = service;
+	this.consuptiomKilowatts = consuptiomKilowatts;
 	services = new ArrayList<String>();
 	services.add(CAPATATION_CONSULT);
 	services.add(SOFTWARE_DEVELOP);
@@ -40,19 +42,27 @@ public void setService(String service){
   this.service = service;
 }
 
-public int calculatedThingXArbol(int consuptiomKilowatts){
+public int getConsuptiomKilowatts(){
+	return consuptiomKilowatts;
+}
+
+public void setConsuptiomKilowatts(int consuptiomKilowatts){
+	this.consuptiomKilowatts = consuptiomKilowatts;
+}
+
+public int calculatedThingXArbol(){
 
 int amountTreeEnergy = 0;
 
-  if(consuptiomKilowatts > 1 && consuptiomKilowatts < 1000){
+  if(getConsuptiomKilowatts() > 1 && getConsuptiomKilowatts() < 1000){
 
     amountTreeEnergy = 8;
 
-  }else if(consuptiomKilowatts > 1001 && consuptiomKilowatts < 3000){
+  }else if(getConsuptiomKilowatts() > 1001 && getConsuptiomKilowatts() < 3000){
 
       amountTreeEnergy = 35;
 
-    }else if(consuptiomKilowatts > 3000){
+    }else if(getConsuptiomKilowatts() > 3000){
 
           amountTreeEnergy = 500;
 
@@ -70,6 +80,7 @@ msj += super.toString();
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
 msj += "El servicio es:" + service;
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
+msj += "Los arboles son:" + calculatedThingXArbol();
 
 return msj;
 

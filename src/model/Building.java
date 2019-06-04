@@ -14,8 +14,8 @@ String msj = "";
 int k = 0;
 boolean abajoL = false;
 
-for(int i = 0;  i < tower[0].length; i++){
-    if(tower[k][i].getNameEmployeer().equals(nameEmpleado)){
+for(int i = 0;  i < tower.length; i++){
+    if(tower[i][k].getNameEmployeer().equals(nameEmpleado)){
 
       msj = "El empleado es" + tower[i][k].getNameEmployeer();
       }
@@ -23,10 +23,11 @@ for(int i = 0;  i < tower[0].length; i++){
   }
 
   if(abajoL == true){
-    for(int m = 0; m  < tower.length; m++){
-      if(tower[tower.length-1-m][k].getNameEmployeer().equals(nameEmpleado)){
+    for(int m = 0; m  < tower[0].length; m++){
+      int large = tower.length-1;
+      if(tower[large][k].getNameEmployeer().equals(nameEmpleado)){
 
-            msj = "El empleado es" + tower[tower.length-1-m][k].getNameEmployeer();
+            msj = "El empleado es" + tower[large][k].getNameEmployeer();
     }
 
 
@@ -45,21 +46,45 @@ public String recorridoZ(String nombreEmpleado){
 String msj = "";
 
 for(int i =0; i < tower.length; i++){
-    if(tower[0][i].getNameEmployeer().equals(nameEmpleado)){
+    if(tower[0][i].getNameEmployeer().equals(nombreEmpleado)){
       msj = "El empleado es" + tower[0][i].getNameEmployeer();
 }
 }
 
-for(int k = tower.length-1; k > 0;k--){
-  for(int o = tower[0].length-1; o > 0; o--){
-      if(tower[k][o].getNameEmployeer().equals(nameEmpleado)){
-          msj = "El empleado es" + tower[0][i].getNameEmployeer();
+for(int k = 1; k < tower[0].length;k++){
+      if(tower[k][tower[0].length-k].getNameEmployeer().equals(nombreEmpleado)){
+          msj = "El empleado es" + tower[k][tower[0].length-k].getNameEmployeer();
+}
+
+}
+
+for(int j= tower[0].length -1; j >0 ; j--){
+  if(tower[tower.length][j].getNameEmployeer().equals(nombreEmpleado)){
+    msj = "El empleado es:" + tower[tower.length][j].getNameEmployeer();
+  }
+}
+return msj;
+}
+
+public String espiralXfila(String nombreEmpleado){
+String msj ="";
+int b = tower[0].length-1;
+//Diagonal principal
+for(int i = 0; i < tower.length;i++,b--){
+  for(int k = 0; k < tower[0].length;k++){
+    if(i == k){
+      if(tower[i][k].getNameEmployeer().equals(nombreEmpleado)){
+      msj += "El empleado es:" + tower[i][k].getNameEmployeer();
+    }else if(tower[i][b].getNameEmployeer().equals(nombreEmpleado)){
+      msj += "El empleado es:" + tower[i][b].getNameEmployeer();
+    }
+    }
   }
 
 }
 
-}
 
+return msj;
 }
 
 public String espiral(String cargo){

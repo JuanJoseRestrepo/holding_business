@@ -2,7 +2,7 @@ package model;
 
 public interface Consuptiom{
 
-public int calculatedThingXArbol(int something);
+public int calculatedThingXArbol();
 
 
 }

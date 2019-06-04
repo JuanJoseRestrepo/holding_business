@@ -67,6 +67,7 @@ msj += "La expiracion es:" + expiration;
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
 msj += "La modalidad es:" + modality;
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
+msj += "Los arboles a sembrar son:" + calculatedThingXArbol();
 
 return msj;
 
@@ -74,21 +75,21 @@ return msj;
 }
 
 
-public int calculatedThingXArbol(int waterAmount){
+public int calculatedThingXArbol(){
 
 int amountTree = 0;
 
 for(int i = 0; i < getProducts().size(); i++){
   Product m = getProducts().get(i);
-  if(waterAmount > 1 && waterAmount < 140){
+  if(m.getWaterAmount() > 1 && m.getWaterAmount()  < 140){
 
     amountTree = 6;
 
-    }else if(waterAmount >41&& waterAmount < 800){
+  }else if(m.getWaterAmount()  >41&& m.getWaterAmount()  < 800){
 
       amountTree = 25;
 
-      }else if(waterAmount>800){
+    }else if(m.getWaterAmount() >800){
 
           amountTree = 200;
 
