@@ -90,7 +90,7 @@ public String espiralE(String nombreEmpleado){
 String msj = "";
 
 for(int i = 0; i < tower.length;i++){
-if(1 % 2 == 0){
+if(i % 2 == 0){
   for(int j = 0; j < tower[0].length;j++){
     if(tower[i][j].getNameEmployeer().equals(nombreEmpleado)){
       msj += "El empleado es:" + tower[i][j].getExtension();

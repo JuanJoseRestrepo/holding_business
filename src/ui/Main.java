@@ -387,67 +387,69 @@ public void showMenu(){
   }
 }
 
-/*
 }else if(userImput == 4){
 
-  ArrayList<Poll> client = new ArrayList<Poll>();
+System.out.println("Digite el nombre de la empresa");
+String nombre1 = reader.nextLine();
 
-  System.out.println("Digite el tipo que quiere: 1.Empresas TechnologyCompany , 2. Empresas ");
-  int mk = reader.nextInt();
+System.out.println(principal.getCompanyWithPolls(nombre1));
+
+System.out.println("Digite del 1 al 5 su satisfaccion en las encuestas");
+System.out.println("Digite el numero de Polls a agregar, 1. 10 encuestas y 2 50 encuestas");
+int number = reader.nextInt();
+reader.nextLine();
+
+if(number ==1){
+for(int i = 0; i < 10; i++){
+
+  System.out.println("Digite el servicio hecho");
+  int k = reader.nextInt();
   reader.nextLine();
 
-  if(mk == 1){
-
-  System.out.println("¿Cuantas encuestas quiere realizar?: 1. 10 Encuestas o 2. 50 encuestas");
-  int ls = reader.nextInt();
+  System.out.println("Digite el tiempo de respuesta dado");
+  int l = reader.nextInt();
   reader.nextLine();
 
-  if(ls == 1){
-  for(int i = 0; i < 10; i++){
-    System.out.println("Digite el nivel prestado");
-    int m = reader.nextInt();
-    reader.nextLine();
+  System.out.println("Digite el costo de relacion por beneficio");
+  int j = reader.nextInt();
+  reader.nextLine();
 
-    System.out.println("Digite el nivel prestado");
-    int z = reader.nextInt();
-    reader.nextLine();
+  Poll kj = new Poll(k,l,j);
 
-    System.out.println("Digite el nivel prestado");
-    int x = reader.nextInt();
-    reader.nextLine();
-
-    Poll pollsAll = new Poll(m,z,x);
-    client.add(pollsAll);
-    principal.addPolls(nameComercy1,client);
+  if(principal.getPollsWithCompany(nombre1) != null){
+    principal.getPollsWithCompany(nombre1).add(kj);
   }
-  }else if(ls == 2){
 
-      for(int k = 0; k < 50; k++){
-        System.out.println("Digite el nivel prestado");
-         m = reader.nextInt();
-        reader.nextLine();
+}
 
-        System.out.println("Digite el nivel prestado");
-         z = reader.nextInt();
-        reader.nextLine();
+}else if(number == 2){
+  for(int h = 0; h < 50;h++){
+    System.out.println("Digite el servicio hecho");
+    int mk = reader.nextInt();
+    reader.nextLine();
 
-        System.out.println("Digite el nivel prestado");
-         x = reader.nextInt();
-        reader.nextLine();
+    System.out.println("Digite el tiempo de respuesta dado");
+    int ml = reader.nextInt();
+    reader.nextLine();
 
-    Poll pollsAll = new Poll(m,z,x);
-    client.add(pollsAll);
-    principal.addPolls(nameComercy1,client);
-    }
+    System.out.println("Digite el costo de relacion por beneficio");
+    int mj = reader.nextInt();
+    reader.nextLine();
+
+    Poll mkj = new Poll(mk,ml,mj);
+
+    if(principal.getPollsWithCompany(nombre1) != null){
+      principal.getPollsWithCompany(nombre1).add(mkj);
   }
 }
 }
-*/
+
 }
 
 }//final userImput
 
-}
+}//final de todo 
+
 
   public void init(){
 

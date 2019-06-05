@@ -36,4 +36,16 @@ public void setRelationCostXBenefit(int relationCostXBenefit){
   this.relationCostXBenefit = relationCostXBenefit;
 }
 
+public String toString(){
+
+String msj = "";
+
+msj += "El servicio hecho es :" + serviceDoIt;
+msj += "El tiempo de respuesta es:" + answerTime;
+msj += "El costo de relacion por beneficio es:" + relationCostXBenefit;
+
+return msj;
+
+}
+
 }

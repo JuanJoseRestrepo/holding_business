@@ -24,6 +24,20 @@ public void addPolls(ArrayList<Poll> client){
   polls = client;
 }
 
+public String getInfor(){
+String msj = "";
+
+for(int i = 0 ; i < polls.size();i++){
+
+msj += polls.get(i).toString();
+
+
+}
+
+return msj;
+
+}
+
 public String toString(){
 String msj = "";
 
