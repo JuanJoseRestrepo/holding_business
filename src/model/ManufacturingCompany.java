@@ -25,6 +25,18 @@ products = pro;
 
 }
 
+public String getInformation(){
+
+String msj = "";
+
+for(int i = 0; i < products.size();i++){
+    msj += products.get(i).toString();
+  }
+return msj;
+}
+
+
+
 public String toString(){
 String msj = "";
 

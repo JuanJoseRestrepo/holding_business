@@ -3,10 +3,12 @@ package model;
 public class Building{
 
 private Employeer[][] tower;
+private int numberBuilding;
 
 
-public Building(){
-tower = new Employeer[7][20];
+public Building(int numberBuilding){
+this.numberBuilding = numberBuilding;
+tower = new Employeer[numberBuilding][20];
 }
 
 public String recorridoL(String nameEmpleado){
@@ -24,10 +26,9 @@ for(int i = 0;  i < tower.length; i++){
 
   if(abajoL == true){
     for(int m = 0; m  < tower[0].length; m++){
-      int large = tower.length-1;
-      if(tower[large][k].getNameEmployeer().equals(nameEmpleado)){
+      if(tower[k][m].getNameEmployeer().equals(nameEmpleado)){
 
-            msj = "El empleado es" + tower[large][k].getExtension();
+            msj = "El empleado es" + tower[k][m].getExtension();
     }
 
 
@@ -89,7 +90,7 @@ public String espiralE(String nombreEmpleado){
 String msj = "";
 
 for(int i = 0; i < tower.length;i++){
-if(1 % 2 != 0){
+if(1 % 2 == 0){
   for(int j = 0; j < tower[0].length;j++){
     if(tower[i][j].getNameEmployeer().equals(nombreEmpleado)){
       msj += "El empleado es:" + tower[i][j].getExtension();

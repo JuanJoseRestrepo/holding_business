@@ -61,33 +61,44 @@ return msj;
 
 }
 
-public ServiceCompany getCompanies(String nombre){
+public String getCompanyWithProducts(String nombre){
+String msj = "";
 
-ServiceCompany m = null;
-boolean f = false;
+for(int i = 0; i < companies.size();i++){
 
-for(int i = 0; i < companies.size() && !f ;i++){
-if(nombre.equals(companies.get(i).getNameComercy())){
-  if(companies.get(i) instanceof TechnologyCompany){
+if(companies.get(i) instanceof ManufacturingCompany){
 
-    m = companies.get(i);
-    f = true;
-  }else if(companies.get(i) instanceof EducationsCompany){
+  if(companies.get(i).getNameComercy().equals(nombre)){
 
-    m = companies.get(i);
-    f = true;
-  }else if(companies.get(i) instanceof PublicCompany){
+msj += ((ManufacturingCompany)companies.get(i)).getInformation();
 
-    m = companies.get(i);
-    f = true;
+}
+}
+
+
+}
+return msj;
+}
+
+public ArrayList<Product> getProductWithCompany(String nombre){
+
+ArrayList<Product> m = null;
+
+  for(int i = 0; i < companies.size();i++){
+
+if(companies.get(i) instanceof ManufacturingCompany){
+
+  if(companies.get(i).getNameComercy().equals(nombre)){
+
+
+    m =  ((ManufacturingCompany)companies.get(i)).getProducts();
+
+}
+
   }
-
 }
-
-}
-
 return m;
-
 }
+
 
 }

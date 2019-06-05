@@ -261,7 +261,6 @@ public void showMenu(){
         ArrayList<Product> l = new ArrayList<Product>();
 
 		    for(int i = 0; i < numberProducts;i++){
-
 			System.out.println("Digite el nombre del producto");
       String namePro = reader.nextLine();
 
@@ -315,6 +314,28 @@ public void showMenu(){
         System.out.println("Digite el nombre legal");
         String legalName5 = reader.nextLine();
 
+        System.out.println("Digite el registro sanitario");
+        String sanitaryReg = reader.nextLine();
+
+        System.out.println("DIgite el estado" + Invima.VALID + "//" + Invima.NORENEWED);
+        String state1 = reader.nextLine();
+
+        System.out.println("Digite la fecha de expiracion");
+        String expira = reader.nextLine();
+
+        System.out.println("Digite la modalidad");
+        char modali = reader.nextLine().charAt(0);
+
+
+        int numberM = reader.nextInt();
+
+        for(int i = 0; i < numberM;i++){
+
+
+
+
+        }
+
 
       }else{
 
@@ -328,9 +349,46 @@ public void showMenu(){
       }
 
     }
-    /*
+
 }else if(userImput == 3){
-  System.out.println("A continuacion se meustran las siguientes empresas:");
+
+  System.out.println("Digite el nombre de la empresa:");
+  String nombre = reader.nextLine();
+
+  System.out.println(principal.getCompanyWithProducts(nombre));
+
+  System.out.println("Digite el numero de productos a agregar");
+  int k = reader.nextInt();
+  reader.nextLine();
+
+  ArrayList<Product> lm = new ArrayList<Product>();
+
+  for(int j = 0; j < k;j++){
+
+    System.out.println("Digite el nombre del producto");
+    String produc = reader.nextLine();
+
+    System.out.println("Digite la cantidad de agua");
+    int wa = reader.nextInt();
+    reader.nextLine();
+
+    System.out.println("Digite la identificacion");
+    long iden = reader.nextLong();
+    reader.nextLine();
+
+    System.out.println("Digite el numero de unidades");
+    int uni = reader.nextInt();
+    reader.nextLine();
+
+    Product kl = new Product(produc,wa,iden,uni);
+
+    if(principal.getProductWithCompany(nombre) != null){
+    principal.getProductWithCompany(nombre).add(kl);
+  }
+}
+
+/*
+}else if(userImput == 4){
 
   ArrayList<Poll> client = new ArrayList<Poll>();
 
@@ -385,9 +443,10 @@ public void showMenu(){
 }
 }
 */
+}
 
 }//final userImput
-}
+
 }
 
   public void init(){
@@ -396,6 +455,12 @@ public void showMenu(){
 
     Company techno = new TechnologyCompany("UbisoftSoftware","123330133","Sucre","3104898989",12,139.1,"2019-03-01", Company.SECURE_INMU_COM, "Bugisoft", TechnologyCompany.SOFTWARE_DEVELOP,1333);
     principal.addCompany(techno);
+
+    Company invi = new Invima("UbisoftSoftware","123330133","Sucre","3104898989",12,139.1,"2019-03-01", Company.SECURE_INMU_COM, "Bugisoft","sadasdasd",Invima.VALID,"2019-02-03",Invima.FABRICATION_SELL);
+    Product zk = new Product("Producto",12,123123133,5);
+    ArrayList<Product> ms =  new ArrayList<Product>();
+    ms.add(zk);
+    principal.addCompanyProducts(invi,ms);
 
   }
 
