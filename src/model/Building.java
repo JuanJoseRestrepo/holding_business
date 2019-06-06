@@ -50,16 +50,16 @@ boolean abajoL = false;
 for(int i = 0;  i < tower.length; i++){
     if(tower[i][k].getNameEmployeer().equals(nameEmpleado)){
 
-      msj = "El empleado es" + tower[i][k].getExtension();
+      msj += "El empleado es" + tower[i][k].getExtension();
       }
     abajoL = true;
   }
 
   if(abajoL == true){
-    for(int m = 0; m  < tower.length; m++){
+    for(int m = 1; m  < tower.length; m++){
       if(tower[k][m].getNameEmployeer().equals(nameEmpleado)){
 
-            msj = "El empleado es" + tower[k][m].getExtension();
+            msj += "El empleado es" + tower[k][m].getExtension();
     }
 
 
@@ -79,20 +79,20 @@ String msj = "";
 
 for(int i =0; i < tower.length; i++){
     if(tower[0][i].getNameEmployeer().equals(nombreEmpleado)){
-      msj = "El empleado es" + tower[0][i].getExtension();
+      msj += "El empleado es" + tower[0][i].getExtension();
 }
 }
 
 for(int k = 1; k < tower.length;k++){
       if(tower[k][tower.length-k].getNameEmployeer().equals(nombreEmpleado)){
-          msj = "El empleado es" + tower[k][tower.length-k].getExtension();
+          msj += "El empleado es" + tower[k][tower.length-k].getExtension();
 }
 
 }
 
 for(int j= 1; j < tower.length; j++){
   if(tower[tower.length][j].getNameEmployeer().equals(nombreEmpleado)){
-    msj = "El empleado es:" + tower[tower.length][j].getExtension();
+    msj += "El empleado es:" + tower[tower.length][j].getExtension();
   }
 }
 return msj;
