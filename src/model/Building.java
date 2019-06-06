@@ -5,10 +5,41 @@ public class Building{
 private Employeer[][] tower;
 private int numberBuilding;
 
+public void inicializatedCub(){
+for(int i = 0; i < tower.length;i++){
+	for(int j = 0; j < tower[0].length;j++){
+		Employeer[i][j] = new Employeer("68" + i + j,false);
+	}
+}
+}
+
 
 public Building(int numberBuilding){
 this.numberBuilding = numberBuilding;
 tower = new Employeer[numberBuilding][20];
+inicializatedCub();
+}
+
+public Employeer[][] getEmployeer(){
+	return tower;
+}
+
+public void setEmployeer(Employeer[][] tower){
+	this.tower = tower;
+}
+
+public void assigTheEmploInCub(String nameEm, String positionEm, String emailEm){
+
+	for(int i = 0; i < tower.length;i++){
+		for(int k = 0; k < tower[0].length;k++){
+			if(tower[i][k].getDisponibility() == false){
+				tower[i][k].setNameEmployeer(nameEm);
+				tower[i][k].setPosition(positionEm);
+				tower[i][k].setEmail(emailEm);
+				tower[i][k].setDisponibility(true);
+			}
+		}
+	}
 }
 
 public String recorridoL(String nameEmpleado){
@@ -46,7 +77,7 @@ public String recorridoZ(String nombreEmpleado){
 
 String msj = "";
 
-for(int i =0; i < tower[0].length; i++){
+for(int i =0; i < tower.length; i++){
     if(tower[0][i].getNameEmployeer().equals(nombreEmpleado)){
       msj = "El empleado es" + tower[0][i].getExtension();
 }
@@ -73,14 +104,14 @@ String msj ="";
 
 //Diagonal principal
  for(int i = 0; i < tower.length;i++){
-	 if(tower[k][tower.length-1-k].getNameEmployeer().equals(nombreEmpleado)){
+	 if(tower[i][i].getNameEmployeer().equals(nombreEmpleado)){
 		 msj += "El empleado es:" + tower[i][i].getExtension();
 	 } 
  }
 
 //Diagonal Inversa
   for(int k = 0; k < tower.length;k++){
-	if((tower.length % 2 == 0) || (tower.length % 2 != 0 && k != tower)){
+	if((tower.length % 2 == 0) || (tower.length % 2 != 0 && k != tower.length/2)){
 		if(tower[k][tower.length-1-k].getNameEmployeer().equals(nombreEmpleado)){
 			msj += "El empleado es:" + tower[k][tower.length-1-k].getExtension();
 		}
@@ -99,13 +130,12 @@ for(int i = 0; i < tower.length;i+= 2){
 		if(i % 2 == 0){
 			if(tower[i][j].getNameEmployeer().equals(nombreEmpleado)){
 			msj += "El empleado es:" + tower[i][j].getExtension();
-			}
-				}else if(i % 2 != 0){
+			 }
+			}else if(i % 2 != 0){
 						if(tower[i][k].getNameEmployeer().equals(nombreEmpleado)){
-						msj += "El empleado es:" + tower[i][k].getExtension();
+						msj += "El empleado es:" + tower[i][tower.length-j-1].getExtension();
 				}
 			}
-
 		}
 		if(m % 2 == 0 && k < tower.length-1){
 			if(tower[k+1][tower.length-1].getNameEmployeer().equals(nombreEmpleado)){
@@ -157,13 +187,35 @@ public String espiral(String cargo){
 	while(fila1 < fila2 && col1 < col2){
 		
 		for(int i = fila1; i < fila2;i++){
-			if(tower[i][col1].get){
-				
+			if(tower[i][col1].getPosition().equals(cargo)){
+				msj += "El empleado" + tower[i][col1].getEmail();
 			}
-			
 		}
-		
+
+		col1++;
+		for(int i = col1; i < col2;i++){
+			if(tower[fila2][i].getPosition().equals(cargo)){
+			}
+		}
+		fila2--;
+
+		for(int i = fila2; i >= fila1 ;i--){
+			if(tower[i][col2].getPosition().equals(cargo)){
+				msj += "El empleado" + tower[i][col2].getEmail();
+			}
+		}
+		col2--;
+
+		for(int i = col2; i >= col1;i--){
+			if(tower[fila1][i].getPosition().equals(cargo)){
+				msj += "El empleado " + tower[fila1][i].getEmail();
+			}
+		}
+		fila1++;
+
 	}
+ return msj;
+}
 
 
 

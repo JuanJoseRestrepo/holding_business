@@ -6,6 +6,7 @@ public class Holding{
 //Relaciones
 
 private ArrayList<Company> companies;
+private Building principalOfThis;
 
 public Holding(){
 companies = new ArrayList<Company>();
@@ -155,6 +156,34 @@ if(companies.get(i) instanceof ServiceCompany){
 }
 
 return k;
+
+}
+
+public void addEmployeerToCubicules(String nameCom,String nameEm,String positionEm,String emailEm){
+
+for(int i = 0; i < companies.size();i++){
+  if(nameCom.equals(companies.get(i).getNameComercy())){
+    if(companies.get(i).getEmployeer() !=null){
+      companies.get(i).assigTheEmploInCub(nameEm,positionEm,emailEm);
+    }
+  }
+}
+
+}
+
+public void addBuildingToCompany(String nameCom,int numberPisos){
+
+for(int i = 0; i < companies.size();i++){
+  if(companies.get(i).getNameComercy().equals(nameCom)){
+    if(companies.get(i).getEmployeer() == null){
+      if(numberPisos >=3 && numberPisos <= 7){
+        Building b = new Building(numberPisos);
+        companies.get(i).setBuilding(b);
+      }
+    }
+  }
+
+}
 
 }
 
