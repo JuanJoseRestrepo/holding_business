@@ -132,18 +132,18 @@ for(int i = 0; i < tower.length;i+= 2){
 			msj += "El empleado es:" + tower[i][j].getExtension();
 			 }
 			}else if(i % 2 != 0){
-						if(tower[i][k].getNameEmployeer().equals(nombreEmpleado)){
+						if(tower[i][j].getNameEmployeer().equals(nombreEmpleado)){
 						msj += "El empleado es:" + tower[i][tower.length-j-1].getExtension();
 				}
 			}
 		}
 		if(m % 2 == 0 && k < tower.length-1){
-			if(tower[k+1][tower.length-1].getNameEmployeer().equals(nombreEmpleado)){
-				msj += "El empleado es:" + tower[k+1][tower.length-1].getExtension();
+			if(tower[i+1][tower.length-1].getNameEmployeer().equals(nombreEmpleado)){
+				msj += "El empleado es:" + tower[i+1][tower.length-1].getExtension();
 			}
 		}else{
 			if(tower[k+1][0].getNameEmployeer().equals(nombreEmpleadoeEmpleado)){
-				msj += "El empleado es:" + tower[k+1][0].getExtension();
+				msj += "El empleado es:" + tower[i+1][0].getExtension();
 			}
 		}
 	}
