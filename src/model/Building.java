@@ -127,17 +127,17 @@ int m = 0;
 
 for(int i = 0; i < tower.length;i+= 2){
 	for(int j = 0; j < tower.length;j++){
-		if(i % 2 == 0){
+		if(m % 2 == 0){
 			if(tower[i][j].getNameEmployeer().equals(nombreEmpleado)){
 			msj += "El empleado es:" + tower[i][j].getExtension();
 			 }
-			}else if(i % 2 != 0){
+			}else if(m % 2 != 0){
 						if(tower[i][tower.length-j-1].getNameEmployeer().equals(nombreEmpleado)){
 						msj += "El empleado es:" + tower[i][tower.length-j-1].getExtension();
 				}
 			}
 		}
-		if(m % 2 == 0 && k < tower.length-1){
+		if(m % 2 == 0 && i < tower.length-1){
 			if(tower[i+1][tower.length-1].getNameEmployeer().equals(nombreEmpleado)){
 				msj += "El empleado es:" + tower[i+1][tower.length-1].getExtension();
 			}
