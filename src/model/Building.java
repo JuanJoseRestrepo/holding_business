@@ -142,10 +142,11 @@ for(int i = 0; i < tower.length;i+= 2){
 				msj += "El empleado es:" + tower[i+1][tower.length-1].getExtension();
 			}
 		}else{
-			if(tower[k+1][0].getNameEmployeer().equals(nombreEmpleadoeEmpleado)){
+			if(tower[i+1][0].getNameEmployeer().equals(nombreEmpleadoeEmpleado)){
 				msj += "El empleado es:" + tower[i+1][0].getExtension();
 			}
 		}
+		m++;
 	}
 		return msj;
 }
