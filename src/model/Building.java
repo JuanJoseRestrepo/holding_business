@@ -30,13 +30,15 @@ public void setEmployeer(Employeer[][] tower){
 
 public void assigTheEmploInCub(String nameEm, String positionEm, String emailEm){
 
-	for(int i = 0; i < tower.length;i++){
-		for(int k = 0; k < tower[0].length;k++){
+boolean t = false;
+	for(int i = 0; i < tower.length && !t;i++){
+		for(int k = 0; k < tower[0].length && !t;k++){
 			if(tower[i][k].getDisponibility() == false){
 				tower[i][k].setNameEmployeer(nameEm);
 				tower[i][k].setPosition(positionEm);
 				tower[i][k].setEmail(emailEm);
 				tower[i][k].setDisponibility(true);
+				t = true;
 			}
 		}
 	}
@@ -50,16 +52,16 @@ boolean abajoL = false;
 for(int i = 0;  i < tower.length; i++){
     if(tower[i][k].getNameEmployeer().equals(nameEmpleado)){
 
-      msj += "El empleado es" + tower[i][k].getExtension();
+      msj = "El empleado es" + tower[i][k].getExtension();
       }
     abajoL = true;
   }
 
   if(abajoL == true){
-    for(int m = 1; m  < tower.length; m++){
+    for(int m = 1; m  < tower[0].length; m++){
       if(tower[k][m].getNameEmployeer().equals(nameEmpleado)){
 
-            msj += "El empleado es" + tower[k][m].getExtension();
+            msj = "El empleado es" + tower[k][m].getExtension();
     }
 
 
@@ -91,7 +93,7 @@ for(int k = 1; k < tower.length;k++){
 }
 
 for(int j= 1; j < tower.length; j++){
-  if(tower[tower.length][j].getNameEmployeer().equals(nombreEmpleado)){
+  if(tower[tower.length-1][j].getNameEmployeer().equals(nombreEmpleado)){
     msj += "El empleado es:" + tower[tower.length][j].getExtension();
   }
 }

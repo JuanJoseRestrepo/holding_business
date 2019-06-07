@@ -27,10 +27,10 @@ public void showMenu(){
   System.out.println("|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
   System.out.println("1.Mostrar la informacion");
   System.out.println("2.Agregar una compahnia");
-  System.out.println("9.Salir");
+  System.out.println("13.Salir");
   System.out.println("|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
 
-  while(userImput != 9){
+  while(userImput != 13){
 
     userImput = reader.nextInt();
     reader.nextLine();
@@ -639,6 +639,66 @@ for(int i = 0; i < 10; i++){
   }
 }
 }
+
+}else if(userImput == 5){
+
+System.out.println("Digite el nombre de la companhia");
+String nameCom = reader.nextLine();
+
+System.out.println("Digite el numero de pisos min 3, max 7");
+int numberPisos = reader.nextInt();
+reader.nextLine();
+
+Building willy = new Building(numberPisos);
+
+principal.addBuildingToCompany(nameCom,willy);
+
+}else if(userImput == 6){
+
+System.out.println("Digite el nombre de la companhia");
+String comName = reader.nextLine();
+
+System.out.println("Digite el nombre del empleado");
+String nameEm = reader.nextLine();
+
+System.out.println("Digite el cargo del empleado");
+String positionEm = reader.nextLine();
+
+System.out.println("Digite el email del empleado");
+String emailEm = reader.nextLine();
+
+principal.addEmployeerToCubicules(comName,nameEm,positionEm,emailEm);
+
+}else if(userImput == 7){
+
+System.out.println("Digite el nombre de la companhia");
+String nombreComy = reader.nextLine();
+
+System.out.println("Digite el nombre del empleado");
+String nameEmple = reader.nextLine();
+
+System.out.println(principal.showBuildingL(nombreComy,nameEmple));
+
+}else if(userImput == 8){
+
+  System.out.println("Digite el nombre de la companhia");
+  String nombreComy1 = reader.nextLine();
+
+  System.out.println("Digite el nombre del empleado");
+  String nameEmple1 = reader.nextLine();
+
+  System.out.println(principal.showBuildingE(nombreComy1,nameEmple1));
+
+
+}else if(userImput == 9){
+
+  System.out.println("Digite el nombre de la companhia");
+  String nombreComy1 = reader.nextLine();
+
+  System.out.println("Digite el cargo del empleado");
+  String cargo1 = reader.nextLine();
+
+  System.out.println(principal.showBuildingEspiral(nombreComy1,cargo1));
 
 }
 

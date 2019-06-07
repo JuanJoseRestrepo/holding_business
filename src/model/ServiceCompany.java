@@ -60,11 +60,32 @@ msj += "El tipo de organizacion es:" + getTypeOrganization();
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
 msj += "El nombre legal es:" + getLegalName();
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
+msj += "El promedio de las encuestas es:" + promediateOfThis();
+msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
 
 return msj;
 
 
 }
+
+public String promediateOfThis(){
+
+String msj = "";
+int ser = 0;
+int ans = 0;
+int rela = 0;
+for(int i = 0; i < polls.size();i++){
+  ser += polls.get(i).getServiceDoIt();
+  ans += polls.get(i).getAnswerTime();
+  rela += polls.get(i).getRelationCostXBenefit();
+
+  msj += "El servicio hecho es:" + ser + "El tiempo de respuesta es:" + ans + "El costo de relacion por beneficio es:" + rela;
+}
+return msj;
+
+}
+
+
 
 
 

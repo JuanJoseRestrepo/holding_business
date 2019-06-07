@@ -178,5 +178,61 @@ for(int i = 0; i < companies.size();i++){
 
 }
 
+public String showBuildingL(String nombre3,String nombreEmpleado){
+String msj = "";
+
+for(int i = 0; i < companies.size();i++){
+if(companies.get(i).getNameComercy().equals(nombre3)){
+
+msj += companies.get(i).getBuilding1().recorridoL(nombreEmpleado);
+
+}
+
+}
+return msj;
+}
+
+public String showBuildingZ(String nombre3,String nombreEmpleado){
+String msj = "";
+
+for(int i = 0; i < companies.size();i++){
+if(companies.get(i).getNameComercy().equals(nombre3)){
+
+msj += companies.get(i).getBuilding1().recorridoZ(nombreEmpleado);
+
+}
+
+}
+return msj;
+}
+
+public String showBuildingEspiral(String nombre3,String cargo1){
+String msj = "";
+
+for(int i = 0; i < companies.size();i++){
+if(companies.get(i).getNameComercy().equals(nombre3)){
+
+msj += companies.get(i).getBuilding1().espiral(cargo1);
+
+}
+
+}
+return msj;
+}
+
+public String showBuildingE(String nombre3,String nombreEmpleado){
+String msj = "";
+
+for(int i = 0; i < companies.size();i++){
+if(companies.get(i).getNameComercy().equals(nombre3)){
+
+msj += companies.get(i).getBuilding1().espiralE(nombreEmpleado);
+
+}
+
+}
+return msj;
+}
+
 
 }
