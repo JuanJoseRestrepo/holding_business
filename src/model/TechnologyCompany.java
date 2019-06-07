@@ -21,8 +21,8 @@ private int consuptiomKilowatts;
 private ArrayList<String> services;
 
 
-public TechnologyCompany(String nameComercy,String nit, String addres,String phoneContact, int employeerCant, double amountActives, String dateOfInscription ,char typeOrganization, String legalName,String service,int consuptiomKilowatts){
-super(nameComercy,nit,addres,phoneContact,employeerCant,amountActives,dateOfInscription,typeOrganization,legalName);
+public TechnologyCompany(String nameComercy,String nit, String addres,String phoneContact, int employeerCant, double amountActives, String dateOfInscription ,char typeOrganization, String legalName,Building build,String service,int consuptiomKilowatts){
+super(nameComercy,nit,addres,phoneContact,employeerCant,amountActives,dateOfInscription,typeOrganization,legalName,build);
 	this.service = service;
 	this.consuptiomKilowatts = consuptiomKilowatts;
 	services = new ArrayList<String>();

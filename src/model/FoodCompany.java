@@ -10,8 +10,8 @@ private String importer;
 private String maker;
 private String conservation;
 
-public FoodCompany(String nameComercy,String nit, String addres,String phoneContact, int employeerCant, double amountActives, String dateOfInscription, char typeOrganization, String legalName,String importer,String maker,String conservation){
-super(nameComercy,nit,addres,phoneContact,employeerCant,amountActives,dateOfInscription,typeOrganization,legalName);
+public FoodCompany(String nameComercy,String nit, String addres,String phoneContact, int employeerCant, double amountActives, String dateOfInscription, char typeOrganization, String legalName,Building build,String importer,String maker,String conservation){
+super(nameComercy,nit,addres,phoneContact,employeerCant,amountActives,dateOfInscription,typeOrganization,legalName,build);
 this.importer = importer;
 this.maker = maker;
 this.conservation = conservation;

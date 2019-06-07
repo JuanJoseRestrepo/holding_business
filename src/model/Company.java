@@ -21,9 +21,9 @@ private double amountActives;
 private String dateOfInscription;
 private char typeOrganization;
 private String legalName;
-//private Building build;
+private Building build;
 
-public Company(String nameComercy,String nit, String addres,String phoneContact, int employeerCant, double amountActives, String dateOfInscription, char typeOrganization, String legalName ){
+public Company(String nameComercy,String nit, String addres,String phoneContact, int employeerCant, double amountActives, String dateOfInscription, char typeOrganization, String legalName,Building build){
   this.nameComercy = nameComercy;
   this.nit = nit;
   this.addres = addres;
@@ -33,7 +33,15 @@ public Company(String nameComercy,String nit, String addres,String phoneContact,
   this.dateOfInscription = dateOfInscription;
   this.typeOrganization = typeOrganization;
   this.legalName = legalName;
-  //this.build = build;
+  this.build = build;
+}
+
+public Building getBuilding1(){
+  return build;
+}
+
+public void setBuilding1(Building build){
+  this.build = build;
 }
 
 public String getDateOfInscription(){

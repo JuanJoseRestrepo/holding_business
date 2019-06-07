@@ -13,8 +13,8 @@ private String state;
 private String expiration;
 private char modality;
 
-public Invima(String nameComercy,String nit, String addres,String phoneContact, int employeerCant, double amountActives, String dateOfInscription, char typeOrganization, String legalName,String sanitaryRegistration, String state, String expiration, char modality){
-super(nameComercy,nit,addres,phoneContact,employeerCant,amountActives,dateOfInscription,typeOrganization,legalName);
+public Invima(String nameComercy,String nit, String addres,String phoneContact, int employeerCant, double amountActives, String dateOfInscription, char typeOrganization, String legalName,Building build,String sanitaryRegistration, String state, String expiration, char modality){
+super(nameComercy,nit,addres,phoneContact,employeerCant,amountActives,dateOfInscription,typeOrganization,legalName,build);
   this.sanitaryRegistration = sanitaryRegistration;
   this.state = state;
   this.expiration = expiration;

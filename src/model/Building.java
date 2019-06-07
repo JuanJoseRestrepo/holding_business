@@ -8,7 +8,7 @@ private int numberBuilding;
 public void inicializatedCub(){
 for(int i = 0; i < tower.length;i++){
 	for(int j = 0; j < tower[0].length;j++){
-		Employeer[i][j] = new Employeer("68" + i + j,false);
+		tower[i][j] = new Employeer("","68" + i + j,"","",false);
 	}
 }
 }
@@ -106,7 +106,7 @@ String msj ="";
  for(int i = 0; i < tower.length;i++){
 	 if(tower[i][i].getNameEmployeer().equals(nombreEmpleado)){
 		 msj += "El empleado es:" + tower[i][i].getExtension();
-	 } 
+	 }
  }
 
 //Diagonal Inversa
@@ -142,7 +142,7 @@ for(int i = 0; i < tower.length;i+= 2){
 				msj += "El empleado es:" + tower[i+1][tower.length-1].getExtension();
 			}
 		}else{
-			if(tower[i+1][0].getNameEmployeer().equals(nombreEmpleadoeEmpleado)){
+			if(tower[i+1][0].getNameEmployeer().equals(nombreEmpleado)){
 				msj += "El empleado es:" + tower[i+1][0].getExtension();
 			}
 		}
@@ -186,7 +186,7 @@ public String espiral(String cargo){
 	int col2 = tower.length-1;
 
 	while(fila1 < fila2 && col1 < col2){
-		
+
 		for(int i = fila1; i < fila2;i++){
 			if(tower[i][col1].getPosition().equals(cargo)){
 				msj += "El empleado" + tower[i][col1].getEmail();

@@ -8,8 +8,17 @@ public class Holding{
 private ArrayList<Company> companies;
 private Building principalOfThis;
 
-public Holding(){
+public Holding(Building principalOfThis){
+  this.principalOfThis = principalOfThis;
 companies = new ArrayList<Company>();
+}
+
+public Building getBuilding(){
+  return principalOfThis;
+}
+
+public void setBuilding(Building principalOfThis){
+  this.principalOfThis = principalOfThis;
 }
 
 public void addCompany(Company m){
@@ -35,13 +44,6 @@ public void addCompanyProducts(Company k,ArrayList<Product> l){
   companies.add(k);
   ((ManufacturingCompany) k).addProduct(l);
 
-	for(int i = 0; i < companies.size();i++){
-		if(companies.get(i) instanceof ManufacturingCompany){
-      companies.add(k);
-    ((ManufacturingCompany) k).addProduct(l);
-		}
-
-	}
 
 }
 
@@ -49,14 +51,6 @@ public void addCompanyWithPolls(Company k, ArrayList<Poll> polls){
 
 companies.add(k);
 ((ServiceCompany)k).addPolls(polls);
-
-for(int i = 0; i < companies.size();i++){
-  if(companies.get(i) instanceof ServiceCompany){
-  companies.add(k);
-  ((ServiceCompany) k).addPolls(polls);
-  }
-
-}
 
 
 }
@@ -163,23 +157,20 @@ public void addEmployeerToCubicules(String nameCom,String nameEm,String position
 
 for(int i = 0; i < companies.size();i++){
   if(nameCom.equals(companies.get(i).getNameComercy())){
-    if(companies.get(i).getEmployeer() !=null){
-      companies.get(i).assigTheEmploInCub(nameEm,positionEm,emailEm);
+    if(companies.get(i).getBuilding1().getEmployeer() !=null){
+      companies.get(i).getBuilding1().assigTheEmploInCub(nameEm,positionEm,emailEm);
     }
   }
 }
 
 }
 
-public void addBuildingToCompany(String nameCom,int numberPisos){
+public void addBuildingToCompany(String nameCom,Building numberPisos){
 
 for(int i = 0; i < companies.size();i++){
   if(companies.get(i).getNameComercy().equals(nameCom)){
-    if(companies.get(i).getEmployeer() == null){
-      if(numberPisos >=3 && numberPisos <= 7){
-        Building b = new Building(numberPisos);
-        companies.get(i).setBuilding(b);
-      }
+    if(companies.get(i).getBuilding1().getEmployeer() == null){
+        companies.get(i).setBuilding1(numberPisos);
     }
   }
 

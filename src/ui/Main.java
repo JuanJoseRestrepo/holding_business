@@ -85,7 +85,6 @@ public void showMenu(){
 
         System.out.println("Digite el tipo de organizacion" + "Agricultura,caza,silvestre y pescadera:" +Company.AGRICUL_HUNT_SILV_FISH + "//" + "Explotacion de minas:" + Company.EXPLOT_MINES_CAN + "//" + "Industria de manufactura:" + Company.INDUSTRY_MANU + "//" + "Electricidad,gas y vapos:" + Company.ELECTRICITY_GAS_STEAM + "//" + "construcion:" + Company.CONSTRUCTION + "//" + "Comercio al mayor y menor" + Company.COMERCY_MM + "//" + "Transporte,almacenamiento y Comunicaciones" + Company.TRANSPORTATION_A_C + "//" + "Seguros,inmuebles" + Company.SECURE_INMU_COM + "//" + "Comunales,sociales" + Company.SOCI_COM);
         char typeOrganization1 = reader.nextLine().charAt(0);
-        reader.nextLine();
 
         System.out.println("Digite el nombre legal");
         String legalName1 = reader.nextLine();
@@ -119,9 +118,63 @@ public void showMenu(){
         int totalEstudents = reader.nextInt();
         reader.nextLine();
 
-        Company m = new EducationsCompany(comerName1,nit1,addres1,phoneContact1,employeerCant1,amountActives1,dateOfInscription1,typeOrganization1,legalName1,numberRegistrationMEN1,numberYearsAcreditation1,positionSaber11,positionSaberPro,nameRector,sectorEdu,students1and2,totalEstudents);
+        System.out.println("AHORA DIGITE UNOS REQUERIMIENTOS DE MAS");
+        System.out.println("Digite el numero de pisos que quiere para su edificio");
+        int m1 = reader.nextInt();
+        reader.nextLine();
 
-        principal.addCompany(m);
+        Building jks1 = new Building(m1);
+
+        Company m = new EducationsCompany(comerName1,nit1,addres1,phoneContact1,employeerCant1,amountActives1,dateOfInscription1,typeOrganization1,legalName1,jks1,numberRegistrationMEN1,numberYearsAcreditation1,positionSaber11,positionSaberPro,nameRector,sectorEdu,students1and2,totalEstudents);
+
+        System.out.println( "Ingrese las encuestas hechas por los usuarios, 1.SI son 10 encuestas,2.NO son mas de 10 (50)");
+        int userSel = reader.nextInt();
+        reader.nextLine();
+
+        ArrayList<Poll> pollss = new ArrayList<Poll>();
+
+        if(userSel == 1){
+
+          for(int i = 0; i < 10; i++){
+          System.out.println("Digite el servicio hecho");
+          int q = reader.nextInt();
+          reader.nextLine();
+
+          System.out.println("Digite el tiempo de respuesta dado");
+          int w = reader.nextInt();
+          reader.nextLine();
+
+          System.out.println("Digite el costo de relacion por beneficio");
+          int e = reader.nextInt();
+          reader.nextLine();
+
+          Poll kjr = new Poll(q,w,e);
+          pollss.add(kjr);
+          principal.addCompanyWithPolls(m,pollss);
+
+        }
+        }else if(userSel == 2){
+
+          for (int i = 0;i < 50; i++){
+
+          System.out.println("Digite el servicio hecho");
+          int k = reader.nextInt();
+          reader.nextLine();
+
+          System.out.println("Digite el tiempo de respuesta dado");
+          int l = reader.nextInt();
+          reader.nextLine();
+
+          System.out.println("Digite el costo de relacion por beneficio");
+          int j = reader.nextInt();
+          reader.nextLine();
+
+          Poll kjss = new Poll(k,l,j);
+          pollss.add(kjss);
+          principal.addCompanyWithPolls(m,pollss);
+          }
+
+      }
 
 
 
@@ -163,9 +216,65 @@ public void showMenu(){
         int consupTiom = reader.nextInt();
         reader.nextLine();
 
-		     Company n = new TechnologyCompany(comerName2,nit2,addres2,phoneContact2,employeerCant2,amountActives2,dateOfInscription2,typeOrganization2,legalName2,serviceTechno,consupTiom);
+        System.out.println("AHORA DIGITE UNOS REQUERIMIENTOS DE MAS");
+        System.out.println("Digite el numero de pisos que quiere para su edificio");
+        int m = reader.nextInt();
+        reader.nextLine();
 
-		     principal.addCompany(n);
+        Building jks = new Building(m);
+
+		    Company n = new TechnologyCompany(comerName2,nit2,addres2,phoneContact2,employeerCant2,amountActives2,dateOfInscription2,typeOrganization2,legalName2,jks,serviceTechno,consupTiom);
+
+        System.out.println( "Ingrese las encuestas hechas por los usuarios, 1.SI son 10 encuestas,2.NO son mas de 10 (50)");
+        int userSel1 = reader.nextInt();
+        reader.nextLine();
+
+        ArrayList<Poll> pollss1 = new ArrayList<Poll>();
+
+        if(userSel1 == 1){
+
+          for(int i = 0; i < 10; i++){
+          System.out.println("Digite el servicio hecho");
+          int q1 = reader.nextInt();
+          reader.nextLine();
+
+          System.out.println("Digite el tiempo de respuesta dado");
+          int w1 = reader.nextInt();
+          reader.nextLine();
+
+          System.out.println("Digite el costo de relacion por beneficio");
+          int e1 = reader.nextInt();
+          reader.nextLine();
+
+          Poll kjr1 = new Poll(q1,w1,e1);
+          pollss1.add(kjr1);
+          principal.addCompanyWithPolls(n,pollss1);
+
+        }
+
+      }else if(userSel1 == 2){
+
+          for (int i = 0;i < 50; i++){
+
+          System.out.println("Digite el servicio hecho");
+          int k1 = reader.nextInt();
+          reader.nextLine();
+
+          System.out.println("Digite el tiempo de respuesta dado");
+          int l1 = reader.nextInt();
+          reader.nextLine();
+
+          System.out.println("Digite el costo de relacion por beneficio");
+          int j1 = reader.nextInt();
+          reader.nextLine();
+
+          Poll kjss1 = new Poll(k1,l1,j1);
+          pollss1.add(kjss1);
+          principal.addCompanyWithPolls(n,pollss1);
+          }
+
+      }
+
 
       }else if(userSelection == 3){
 
@@ -209,9 +318,63 @@ public void showMenu(){
 		int suscriptors1and2 = reader.nextInt();
 		reader.nextLine();
 
-		Company b = new PublicCompany(comerName3,nit3,addres3,phoneContact3,employeerCant3,amountActives3,dateOfInscription3,typeOrganization3,legalName3,namePublic,suscriptorsTotal,suscriptors1and2);
+    System.out.println("AHORA DIGITE UNOS REQUERIMIENTOS DE MAS");
+    System.out.println("Digite el numero de pisos que quiere para su edificio");
+    int m3 = reader.nextInt();
+    reader.nextLine();
 
-		principal.addCompany(b);
+    Building jks3 = new Building(m3);
+
+		Company b = new PublicCompany(comerName3,nit3,addres3,phoneContact3,employeerCant3,amountActives3,dateOfInscription3,typeOrganization3,legalName3,jks3,namePublic,suscriptorsTotal,suscriptors1and2);
+
+    System.out.println( "Ingrese las encuestas hechas por los usuarios, 1.SI son 10 encuestas,2.NO son mas de 10 (50)");
+    int userSel2 = reader.nextInt();
+    reader.nextLine();
+
+    ArrayList<Poll> pollss2 = new ArrayList<Poll>();
+
+    if(userSel2 == 1){
+
+      for(int i = 0; i < 10; i++){
+      System.out.println("Digite el servicio hecho");
+      int q2 = reader.nextInt();
+      reader.nextLine();
+
+      System.out.println("Digite el tiempo de respuesta dado");
+      int w2 = reader.nextInt();
+      reader.nextLine();
+
+      System.out.println("Digite el costo de relacion por beneficio");
+      int e2 = reader.nextInt();
+      reader.nextLine();
+
+      Poll kjr2 = new Poll(q2,w2,e2);
+      pollss2.add(kjr2);
+      principal.addCompanyWithPolls(b,pollss2);
+
+    }
+  }else if(userSel2 == 2){
+
+      for (int i = 0;i < 50; i++){
+
+      System.out.println("Digite el servicio hecho");
+      int k2 = reader.nextInt();
+      reader.nextLine();
+
+      System.out.println("Digite el tiempo de respuesta dado");
+      int l2 = reader.nextInt();
+      reader.nextLine();
+
+      System.out.println("Digite el costo de relacion por beneficio");
+      int j2 = reader.nextInt();
+      reader.nextLine();
+
+      Poll kjss2 = new Poll(k2,l2,j2);
+      pollss2.add(kjss2);
+      principal.addCompanyWithPolls(b,pollss2);
+      }
+
+  }
 
       }else if(userSelection == 4){
 
@@ -253,14 +416,21 @@ public void showMenu(){
         System.out.println("Digite la conservacion" + "/" + FoodCompany.ROOM_TEMPERATURE + "/" + FoodCompany.REFRIGERATION + "/" + FoodCompany.FREEZER);
         String con = reader.nextLine();
 
-        Company z = new FoodCompany(comerName4,nit4,addres4,phoneContact4,employeerCant4,amountActives4,dateOfInscription4,typeOrganization4,legalName4,impor,mak,con);
+        System.out.println("AHORA DIGITE UNOS REQUERIMIENTOS DE MAS");
+        System.out.println("Digite el numero de pisos que quiere para su edificio");
+        int m4 = reader.nextInt();
+        reader.nextLine();
+
+        Building jks4 = new Building(m4);
+
+        Company z = new FoodCompany(comerName4,nit4,addres4,phoneContact4,employeerCant4,amountActives4,dateOfInscription4,typeOrganization4,legalName4,jks4,impor,mak,con);
 
 		    System.out.println("Digite cuantos productos necesita");
 		    int numberProducts = reader.nextInt();
 
         ArrayList<Product> l = new ArrayList<Product>();
 
-		    for(int i = 0; i < numberProducts;i++){
+		   for(int i = 0; i < numberProducts;i++){
 			System.out.println("Digite el nombre del producto");
       String namePro = reader.nextLine();
 
@@ -323,18 +493,44 @@ public void showMenu(){
         System.out.println("Digite la fecha de expiracion");
         String expira = reader.nextLine();
 
-        System.out.println("Digite la modalidad");
+        System.out.println("Digite la modalidad" +"//" + Invima.FABRICATION_EXPO + "//" + Invima.FABRICATION_SELL + "//" + Invima.IMPORT_SELL);
         char modali = reader.nextLine().charAt(0);
 
+        System.out.println("AHORA DIGITE UNOS REQUERIMIENTOS DE MAS");
+        System.out.println("Digite el numero de pisos que quiere para su edificio, min de 3 max de 7");
+        int m5 = reader.nextInt();
+        reader.nextLine();
 
-        int numberM = reader.nextInt();
+        Building jks5 = new Building(m5);
 
-        for(int i = 0; i < numberM;i++){
+        Company lol = new Invima(comerName5,nit5,addres5,phoneContact5,employeerCant5,amountActives5,dateOfInscription5,typeOrganization5,legalName5,jks5,sanitaryReg,state1,expira,modali);
 
+        System.out.println("Digite cuantos productos necesita");
+		    int numberProducts1 = reader.nextInt();
 
+        ArrayList<Product> l1 = new ArrayList<Product>();
 
+		   for(int i = 0; i < numberProducts1;i++){
+			System.out.println("Digite el nombre del producto");
+      String namePro1 = reader.nextLine();
 
-        }
+      System.out.println("Digite la cantidad de agua");
+      int aguaCan1 = reader.nextInt();
+      reader.nextLine();
+
+      System.out.println("Digite su identificacion");
+      Long identy1 = reader.nextLong();
+      reader.nextLine();
+
+      System.out.println("Digite el numero de unidades");
+      int unities1 = reader.nextInt();
+      reader.nextLine();
+
+      Product m1 = new Product(namePro1,aguaCan1,identy1,unities1);
+      l1.add(m1);
+      principal.addCompanyProducts(lol,l1);
+
+		}
 
 
       }else{
@@ -448,21 +644,25 @@ for(int i = 0; i < 10; i++){
 
 }//final userImput
 
-}//final de todo 
+}//final de todo
 
 
   public void init(){
 
-    principal = new Holding();
+    principal = new Holding(new Building(13));
 
-    Company techno = new TechnologyCompany("UbisoftSoftware","123330133","Sucre","3104898989",12,139.1,"2019-03-01", Company.SECURE_INMU_COM, "Bugisoft", TechnologyCompany.SOFTWARE_DEVELOP,1333);
+    Building jh = new Building(12);
+    Company techno = new TechnologyCompany("UbisoftSoftware","123330133","Sucre","3104898989",12,139.1,"2019-03-01", Company.SECURE_INMU_COM, "Bugisoft",jh, TechnologyCompany.SOFTWARE_DEVELOP,1333);
     principal.addCompany(techno);
 
-    Company invi = new Invima("UbisoftSoftware","123330133","Sucre","3104898989",12,139.1,"2019-03-01", Company.SECURE_INMU_COM, "Bugisoft","sadasdasd",Invima.VALID,"2019-02-03",Invima.FABRICATION_SELL);
+
+    Building jotaMario = new Building(8);
+    Company invi = new Invima("UbisoftSoftware1","123330133","Sucre","3104898989",12,139.1,"2019-03-01", Company.SECURE_INMU_COM, "Bugisoft",jotaMario,"sadasdasd",Invima.VALID,"2019-02-03",Invima.FABRICATION_SELL);
     Product zk = new Product("Producto",12,123123133,5);
     ArrayList<Product> ms =  new ArrayList<Product>();
     ms.add(zk);
     principal.addCompanyProducts(invi,ms);
+
 
   }
 
