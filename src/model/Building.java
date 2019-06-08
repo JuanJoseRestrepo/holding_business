@@ -52,7 +52,7 @@ boolean abajoL = false;
 for(int i = 0;  i < tower.length; i++){
     if(tower[i][k].getNameEmployeer().equals(nameEmpleado)){
 
-      msj = "El empleado es" + tower[i][k].getExtension();
+      msj = "El empleado es:" + tower[i][k].getExtension();
       }
     abajoL = true;
   }
@@ -61,7 +61,7 @@ for(int i = 0;  i < tower.length; i++){
     for(int m = 1; m  < tower[0].length; m++){
       if(tower[k][m].getNameEmployeer().equals(nameEmpleado)){
 
-            msj = "El empleado es" + tower[k][m].getExtension();
+            msj = "El empleado es:" + tower[k][m].getExtension();
     }
 
 
@@ -81,13 +81,13 @@ String msj = "";
 
 for(int i =0; i < tower.length; i++){
     if(tower[0][i].getNameEmployeer().equals(nombreEmpleado)){
-      msj += "El empleado es" + tower[0][i].getExtension();
+      msj += "El empleado es:" + tower[0][i].getExtension();
 }
 }
 
 for(int k = 1; k < tower.length;k++){
       if(tower[k][tower.length-k].getNameEmployeer().equals(nombreEmpleado)){
-          msj += "El empleado es" + tower[k][tower.length-k].getExtension();
+          msj += "El empleado es:" + tower[k][tower.length-k].getExtension();
 }
 
 }
@@ -162,8 +162,8 @@ for(int i = 0; i < tower.length;i++){
   }
 }
 
-for(int k = tower[0].length-1; k > 0; k--){
-  if(tower[tower.length][k].getNameEmployeer().equals(nombreEmpleado)){
+for(int k = 0; k > tower[0].length; k++){
+  if(tower[tower.length-1][k].getNameEmployeer().equals(nombreEmpleado)){
     msj += "El empleado es:" + tower[tower.length][k].getExtension();
   }
 }
@@ -191,27 +191,28 @@ public String espiral(String cargo){
 
 		for(int i = fila1; i < fila2;i++){
 			if(tower[i][col1].getPosition().equals(cargo)){
-				msj += "El empleado" + tower[i][col1].getEmail();
+				msj += "El empleado:" + tower[i][col1].getEmail();
 			}
 		}
 
 		col1++;
 		for(int i = col1; i < col2;i++){
 			if(tower[fila2][i].getPosition().equals(cargo)){
+				msj += "El empleado:" + tower[fila2][i].getEmail();
 			}
 		}
 		fila2--;
 
 		for(int i = fila2; i >= fila1 ;i--){
 			if(tower[i][col2].getPosition().equals(cargo)){
-				msj += "El empleado" + tower[i][col2].getEmail();
+				msj += "El empleado:" + tower[i][col2].getEmail();
 			}
 		}
 		col2--;
 
 		for(int i = col2; i >= col1;i--){
 			if(tower[fila1][i].getPosition().equals(cargo)){
-				msj += "El empleado " + tower[fila1][i].getEmail();
+				msj += "El empleado:" + tower[fila1][i].getEmail();
 			}
 		}
 		fila1++;

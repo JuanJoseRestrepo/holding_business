@@ -234,5 +234,33 @@ msj += companies.get(i).getBuilding1().espiralE(nombreEmpleado);
 return msj;
 }
 
+public String showBuildingO(String nombre3,String nombreEmpleado){
+String msj = "";
+
+for(int i = 0; i < companies.size();i++){
+if(companies.get(i).getNameComercy().equals(nombre3)){
+
+msj += companies.get(i).getBuilding1().espiralO(nombreEmpleado);
+
+}
+
+}
+return msj;
+}
+
+public String showBuildingX(String nombre3,String nombreEmpleado){
+String msj = "";
+
+for(int i = 0; i < companies.size();i++){
+if(companies.get(i).getNameComercy().equals(nombre3)){
+
+msj += companies.get(i).getBuilding1().espiralXfila(nombreEmpleado);
+
+}
+
+}
+return msj;
+}
+
 
 }

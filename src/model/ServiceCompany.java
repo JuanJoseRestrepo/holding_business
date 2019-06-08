@@ -29,7 +29,7 @@ String msj = "";
 
 for(int i = 0 ; i < polls.size();i++){
 
-msj += polls.get(i).toString();
+msj += polls.get(i).toString1();
 
 
 }
@@ -60,7 +60,7 @@ msj += "El tipo de organizacion es:" + getTypeOrganization()+ "\n";
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
 msj += "El nombre legal es:" + getLegalName()+ "\n";
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
-msj += "El promedio de las encuestas es:" + promediateOfThis()+ "\n";
+msj += "El promedio de las encuestas es:" + promediateFinal()+ "\n";
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
 
 return msj;
@@ -68,20 +68,46 @@ return msj;
 
 }
 
-public String promediateOfThis(){
+public int promediateOfThis(){
 
-String msj = "";
 int ser = 0;
+for(int i = 0; i < polls.size();i++){
+  ser = polls.get(i).getServiceDoIt();
+
+}
+return ser;
+
+}
+
+public int promediateOfThis1(){
+
 int ans = 0;
+for(int i = 0; i < polls.size();i++){
+  ans = polls.get(i).getAnswerTime();
+
+}
+return ans;
+
+}
+
+public int promediateOfThis2(){
+
 int rela = 0;
 for(int i = 0; i < polls.size();i++){
-  ser += polls.get(i).getServiceDoIt();
-  ans += polls.get(i).getAnswerTime();
-  rela += polls.get(i).getRelationCostXBenefit();
-
-  msj += "El servicio hecho es:" + ser + "El tiempo de respuesta es:" + ans + "El costo de relacion por beneficio es:" + rela;
+  rela = polls.get(i).getRelationCostXBenefit();
 }
-return msj;
+return rela;
+
+}
+
+public int promediateFinal(){
+
+  int finalPolls = 0;
+
+  finalPolls = (promediateOfThis() + promediateOfThis1() + promediateOfThis2()) / 10;
+
+  return finalPolls;
+
 
 }
 

@@ -25,12 +25,23 @@ public void showMenu(){
   int userImput = 0;
 
   System.out.println("|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
+  System.out.println("|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
   System.out.println("1.Mostrar la informacion");
   System.out.println("2.Agregar una compahnia");
-  System.out.println("13.Salir");
+  System.out.println("3.Agregar productos a una empresa");
+  System.out.println("4.Agregar encuestas a una empresa");
+  System.out.println("5.Agregar un edificio a una empresa");
+  System.out.println("6.Agregar un empleado a un cubiculo");
+  System.out.println("7.Buscar al empleado en la empresa en forma de L");
+  System.out.println("8.Buscar al empleado en la empresa en forma de E");
+  System.out.println("9.Buscar al empleado en la empresa en forma de Espiral");
+  System.out.println("10.Buscar al empleado en la empresa en forma de O");
+  System.out.println("11.Buscar al empleado en la empresa en forma de X");
+  System.out.println("12.Salir");
+  System.out.println("|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
   System.out.println("|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
 
-  while(userImput != 13){
+  while(userImput != 12){
 
     userImput = reader.nextInt();
     reader.nextLine();
@@ -220,7 +231,7 @@ public void showMenu(){
         System.out.println("CONSTRUCCION:" + Company.CONSTRUCTION);
         System.out.println("COMERCIO AL POR MAYOR Y AL POR MENOR:" + Company.COMERCY_MM);
         System.out.println("TRANSPORTE, ALMACENAMIENTO Y COMUNICACIONES:" + Company.TRANSPORTATION_A_C);
-        System.out.println("EST.F/CIEROS,SEGUROS,B.INMUEBLES,SERV. A COMPANIAS" + Company.SECURE_INMU_COM);
+        System.out.println("EST.F/CIEROS,SEGUROS,B.INMUEBLES,SERV. A COMPANIAS:" + Company.SECURE_INMU_COM);
         System.out.println("COMUNALES, SOCIALES" + Company.SOCI_COM);
         char typeOrganization2 = reader.nextLine().charAt(0);
 
@@ -580,11 +591,21 @@ public void showMenu(){
 
       }else{
 
+        System.out.println("|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
         System.out.println("Ha salido con exito de la creacion");
         System.out.println("|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
         System.out.println("1.Mostrar la informacion");
         System.out.println("2.Agregar una compahnia");
-        System.out.println("9.Salir");
+        System.out.println("3.Agregar productos a una empresa");
+        System.out.println("4.Agregar encuestas a una empresa");
+        System.out.println("5.Agregar un edificio a una empresa");
+        System.out.println("6.Agregar un empleado a un cubiculo");
+        System.out.println("7.Buscar al empleado en la empresa en forma de L");
+        System.out.println("8.Buscar al empleado en la empresa en forma de E");
+        System.out.println("9.Buscar al empleado en la empresa en forma de Espiral");
+        System.out.println("10.Buscar al empleado en la empresa en forma de O");
+        System.out.println("11.Buscar al empleado en la empresa en forma de X");
+        System.out.println("12.Salir");
         System.out.println("|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
 
       }
@@ -745,6 +766,28 @@ System.out.println(principal.showBuildingL(nombreComy,nameEmple));
 
   System.out.println(principal.showBuildingEspiral(nombreComy1,cargo1));
 
+}else if(userImput == 10){
+
+  System.out.println("Digite el nombre de la companhia");
+  String nombreComy2 = reader.nextLine();
+
+  System.out.println("Digite el nombre del empleado");
+  String nameEmple2 = reader.nextLine();
+
+  System.out.println(principal.showBuildingO(nombreComy2,nameEmple2));
+
+
+}else if(userImput == 11){
+
+  System.out.println("Digite el nombre de la companhia");
+  String nombreComy3 = reader.nextLine();
+
+  System.out.println("Digite el nombre del empleado");
+  String nameEmple3 = reader.nextLine();
+
+  System.out.println(principal.showBuildingX(nombreComy3,nameEmple3));
+
+
 }
 
 }//final userImput
@@ -754,14 +797,14 @@ System.out.println(principal.showBuildingL(nombreComy,nameEmple));
 
   public void init(){
 
-    principal = new Holding(new Building(13));
+    principal = new Holding(new Building(5));
 
-    Building jh = new Building(12);
+    Building jh = new Building(6);
     Company techno = new TechnologyCompany("UbisoftSoftware","123330133","Sucre","3104898989",12,139.1,"2019-03-01", Company.SECURE_INMU_COM, "Bugisoft",jh, TechnologyCompany.SOFTWARE_DEVELOP,1333);
     principal.addCompany(techno);
 
 
-    Building jotaMario = new Building(8);
+    Building jotaMario = new Building(7);
     Company invi = new Invima("UbisoftSoftware1","123330133","Sucre","3104898989",12,139.1,"2019-03-01", Company.SECURE_INMU_COM, "Bugisoft",jotaMario,"sadasdasd",Invima.VALID,"2019-02-03",Invima.FABRICATION_SELL);
     Product zk = new Product("Producto",12,123123133,5);
     ArrayList<Product> ms =  new ArrayList<Product>();

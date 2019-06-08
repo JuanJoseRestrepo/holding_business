@@ -36,7 +36,7 @@ public void setRelationCostXBenefit(int relationCostXBenefit){
   this.relationCostXBenefit = relationCostXBenefit;
 }
 
-public String toString(){
+public String toString1(){
 
 String msj = "";
 
