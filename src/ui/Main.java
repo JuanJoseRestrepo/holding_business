@@ -83,7 +83,16 @@ public void showMenu(){
         System.out.println("Digite la fecha en formato AAAA-MM-DD");
         String dateOfInscription1 = reader.nextLine();
 
-        System.out.println("Digite el tipo de organizacion" + "Agricultura,caza,silvestre y pescadera:" +Company.AGRICUL_HUNT_SILV_FISH + "//" + "Explotacion de minas:" + Company.EXPLOT_MINES_CAN + "//" + "Industria de manufactura:" + Company.INDUSTRY_MANU + "//" + "Electricidad,gas y vapos:" + Company.ELECTRICITY_GAS_STEAM + "//" + "construcion:" + Company.CONSTRUCTION + "//" + "Comercio al mayor y menor" + Company.COMERCY_MM + "//" + "Transporte,almacenamiento y Comunicaciones" + Company.TRANSPORTATION_A_C + "//" + "Seguros,inmuebles" + Company.SECURE_INMU_COM + "//" + "Comunales,sociales" + Company.SOCI_COM);
+        System.out.println("Digite el tipo de organizacion:");
+        System.out.println("AGRICULTURA, CAZA, SILVICULTURA Y PEZCA:" + Company.AGRICUL_HUNT_SILV_FISH);
+        System.out.println("EXPLOTACION DE MINAS Y CANTERAS:"+ Company.EXPLOT_MINES_CAN);
+        System.out.println("INDUSTRIA MANUFACTURERA:"+ Company.INDUSTRY_MANU);
+        System.out.println("ELECTRICIDAD, GAS Y VAPOR:" + Company.ELECTRICITY_GAS_STEAM);
+        System.out.println("CONSTRUCCION:" + Company.CONSTRUCTION);
+        System.out.println("COMERCIO AL POR MAYOR Y AL POR MENOR:" + Company.COMERCY_MM);
+        System.out.println("TRANSPORTE, ALMACENAMIENTO Y COMUNICACIONES:" + Company.TRANSPORTATION_A_C);
+        System.out.println("EST.F/CIEROS,SEGUROS,B.INMUEBLES,SERV. A COMPANIAS" + Company.SECURE_INMU_COM);
+        System.out.println("COMUNALES, SOCIALES" + Company.SOCI_COM);
         char typeOrganization1 = reader.nextLine().charAt(0);
 
         System.out.println("Digite el nombre legal");
@@ -203,7 +212,16 @@ public void showMenu(){
         System.out.println("Digite la fecha en formato AAAA-MM-DD");
         String dateOfInscription2 = reader.nextLine();
 
-        System.out.println("Digite el tipo de organizacion" + "Agricultura,caza,silvestre y pescadera:" +Company.AGRICUL_HUNT_SILV_FISH + "//" + "Explotacion de minas:" + Company.EXPLOT_MINES_CAN + "//" + "Industria de manufactura:" + Company.INDUSTRY_MANU + "//" + "Electricidad,gas y vapos:" + Company.ELECTRICITY_GAS_STEAM + "//" + "construcion:" + Company.CONSTRUCTION + "//" + "Comercio al mayor y menor" + Company.COMERCY_MM + "//" + "Transporte,almacenamiento y Comunicaciones" + Company.TRANSPORTATION_A_C + "//" + "Seguros,inmuebles" + Company.SECURE_INMU_COM + "//" + "Comunales,sociales" + Company.SOCI_COM);
+        System.out.println("Digite el tipo de organizacion:");
+        System.out.println("AGRICULTURA, CAZA, SILVICULTURA Y PEZCA:" + Company.AGRICUL_HUNT_SILV_FISH);
+        System.out.println("EXPLOTACION DE MINAS Y CANTERAS:"+ Company.EXPLOT_MINES_CAN);
+        System.out.println("INDUSTRIA MANUFACTURERA:"+ Company.INDUSTRY_MANU);
+        System.out.println("ELECTRICIDAD, GAS Y VAPOR:" + Company.ELECTRICITY_GAS_STEAM);
+        System.out.println("CONSTRUCCION:" + Company.CONSTRUCTION);
+        System.out.println("COMERCIO AL POR MAYOR Y AL POR MENOR:" + Company.COMERCY_MM);
+        System.out.println("TRANSPORTE, ALMACENAMIENTO Y COMUNICACIONES:" + Company.TRANSPORTATION_A_C);
+        System.out.println("EST.F/CIEROS,SEGUROS,B.INMUEBLES,SERV. A COMPANIAS" + Company.SECURE_INMU_COM);
+        System.out.println("COMUNALES, SOCIALES" + Company.SOCI_COM);
         char typeOrganization2 = reader.nextLine().charAt(0);
 
         System.out.println("Digite el nombre legal");
@@ -301,7 +319,16 @@ public void showMenu(){
         System.out.println("Digite la fecha en formato AAAA-MM-DD");
         String dateOfInscription3 = reader.nextLine();
 
-        System.out.println("Digite el tipo de organizacion" + "Agricultura,caza,silvestre y pescadera:" +Company.AGRICUL_HUNT_SILV_FISH + "//" + "Explotacion de minas:" + Company.EXPLOT_MINES_CAN + "//" + "Industria de manufactura:" + Company.INDUSTRY_MANU + "//" + "Electricidad,gas y vapos:" + Company.ELECTRICITY_GAS_STEAM + "//" + "construcion:" + Company.CONSTRUCTION + "//" + "Comercio al mayor y menor" + Company.COMERCY_MM + "//" + "Transporte,almacenamiento y Comunicaciones" + Company.TRANSPORTATION_A_C + "//" + "Seguros,inmuebles" + Company.SECURE_INMU_COM + "//" + "Comunales,sociales" + Company.SOCI_COM);
+        System.out.println("Digite el tipo de organizacion:");
+        System.out.println("AGRICULTURA, CAZA, SILVICULTURA Y PEZCA:" + Company.AGRICUL_HUNT_SILV_FISH);
+        System.out.println("EXPLOTACION DE MINAS Y CANTERAS:"+ Company.EXPLOT_MINES_CAN);
+        System.out.println("INDUSTRIA MANUFACTURERA:"+ Company.INDUSTRY_MANU);
+        System.out.println("ELECTRICIDAD, GAS Y VAPOR:" + Company.ELECTRICITY_GAS_STEAM);
+        System.out.println("CONSTRUCCION:" + Company.CONSTRUCTION);
+        System.out.println("COMERCIO AL POR MAYOR Y AL POR MENOR:" + Company.COMERCY_MM);
+        System.out.println("TRANSPORTE, ALMACENAMIENTO Y COMUNICACIONES:" + Company.TRANSPORTATION_A_C);
+        System.out.println("EST.F/CIEROS,SEGUROS,B.INMUEBLES,SERV. A COMPANIAS" + Company.SECURE_INMU_COM);
+        System.out.println("COMUNALES, SOCIALES" + Company.SOCI_COM);
         char typeOrganization3 = reader.nextLine().charAt(0);
 
         System.out.println("Digite el nombre legal");
@@ -401,7 +428,16 @@ public void showMenu(){
         System.out.println("Digite la fecha en formato AAAA-MM-DD");
         String dateOfInscription4 = reader.nextLine();
 
-        System.out.println("Digite el tipo de organizacion:" + "//" + "Agricultura,caza,silvestre y pescadera:" +Company.AGRICUL_HUNT_SILV_FISH + "//" + "Explotacion de minas:" + Company.EXPLOT_MINES_CAN + "//" + "Industria de manufactura:" + Company.INDUSTRY_MANU + "//" + "Electricidad,gas y vapos:" + Company.ELECTRICITY_GAS_STEAM + "//" + "construcion:" + Company.CONSTRUCTION + "//" + "Comercio al mayor y menor" + Company.COMERCY_MM + "//" + "Transporte,almacenamiento y Comunicaciones" + Company.TRANSPORTATION_A_C + "//" + "Seguros,inmuebles" + Company.SECURE_INMU_COM + "//" + "Comunales,sociales" + Company.SOCI_COM);
+        System.out.println("Digite el tipo de organizacion:");
+        System.out.println("AGRICULTURA, CAZA, SILVICULTURA Y PEZCA:" + Company.AGRICUL_HUNT_SILV_FISH);
+        System.out.println("EXPLOTACION DE MINAS Y CANTERAS:"+ Company.EXPLOT_MINES_CAN);
+        System.out.println("INDUSTRIA MANUFACTURERA:"+ Company.INDUSTRY_MANU);
+        System.out.println("ELECTRICIDAD, GAS Y VAPOR:" + Company.ELECTRICITY_GAS_STEAM);
+        System.out.println("CONSTRUCCION:" + Company.CONSTRUCTION);
+        System.out.println("COMERCIO AL POR MAYOR Y AL POR MENOR:" + Company.COMERCY_MM);
+        System.out.println("TRANSPORTE, ALMACENAMIENTO Y COMUNICACIONES:" + Company.TRANSPORTATION_A_C);
+        System.out.println("EST.F/CIEROS,SEGUROS,B.INMUEBLES,SERV. A COMPANIAS" + Company.SECURE_INMU_COM);
+        System.out.println("COMUNALES, SOCIALES" + Company.SOCI_COM);
         char typeOrganization4 = reader.nextLine().charAt(0);
 
         System.out.println("Digite el nombre legal");
@@ -478,7 +514,16 @@ public void showMenu(){
         System.out.println("Digite la fecha en formato AAAA-MM-DD");
         String dateOfInscription5 = reader.nextLine();
 
-        System.out.println("Digite el tipo de organizacion" + "Agricultura,caza,silvestre y pescadera:" +Company.AGRICUL_HUNT_SILV_FISH + "//" + "Explotacion de minas:" + Company.EXPLOT_MINES_CAN + "//" + "Industria de manufactura:" + Company.INDUSTRY_MANU + "//" + "Electricidad,gas y vapos:" + Company.ELECTRICITY_GAS_STEAM + "//" + "construcion:" + Company.CONSTRUCTION + "//" + "Comercio al mayor y menor" + Company.COMERCY_MM + "//" + "Transporte,almacenamiento y Comunicaciones" + Company.TRANSPORTATION_A_C + "//" + "Seguros,inmuebles" + Company.SECURE_INMU_COM + "//" + "Comunales,sociales" + Company.SOCI_COM);
+        System.out.println("Digite el tipo de organizacion:");
+        System.out.println("AGRICULTURA, CAZA, SILVICULTURA Y PEZCA:" + Company.AGRICUL_HUNT_SILV_FISH);
+        System.out.println("EXPLOTACION DE MINAS Y CANTERAS:"+ Company.EXPLOT_MINES_CAN);
+        System.out.println("INDUSTRIA MANUFACTURERA:"+ Company.INDUSTRY_MANU);
+        System.out.println("ELECTRICIDAD, GAS Y VAPOR:" + Company.ELECTRICITY_GAS_STEAM);
+        System.out.println("CONSTRUCCION:" + Company.CONSTRUCTION);
+        System.out.println("COMERCIO AL POR MAYOR Y AL POR MENOR:" + Company.COMERCY_MM);
+        System.out.println("TRANSPORTE, ALMACENAMIENTO Y COMUNICACIONES:" + Company.TRANSPORTATION_A_C);
+        System.out.println("EST.F/CIEROS,SEGUROS,B.INMUEBLES,SERV. A COMPANIAS" + Company.SECURE_INMU_COM);
+        System.out.println("COMUNALES, SOCIALES" + Company.SOCI_COM);
         char typeOrganization5 = reader.nextLine().charAt(0);
 
         System.out.println("Digite el nombre legal");

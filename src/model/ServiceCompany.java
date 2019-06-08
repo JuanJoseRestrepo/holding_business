@@ -41,26 +41,26 @@ return msj;
 public String toString(){
 String msj = "";
 
+msj += "----------------------------------------------------------------------------------------------------------------------------\n";
+msj += "El nombre del comercio es:" + getNameComercy() + "\n";
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
-msj += "El nombre del comercio es:" + getNameComercy();
+msj += "El nit es:" + getNit() + "\n";
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
-msj += "El nit es:" + getNit();
+msj += "La direccion es:" + getAddres() + "\n";
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
-msj += "La direccion es:" + getAddres();
+msj += "El numero  celular es:" + getPhoneContact() + "\n";
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
-msj += "El numero  celular es:" + getPhoneContact();
+msj += "La cantidad de empleados es:" + getEmployeerCant() + "\n";
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
-msj += "La cantidad de empleados es:" + getEmployeerCant();
+msj += "La cantidad de activos es:" + getAmountActives() + "\n";
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
-msj += "La cantidad de activos es:" + getAmountActives();
+msj += "La fecha en la que se hizo" + getDateOfInscription()+ "\n";
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
-msj += "La fecha en la que se hizo" + getDateOfInscription();
+msj += "El tipo de organizacion es:" + getTypeOrganization()+ "\n";
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
-msj += "El tipo de organizacion es:" + getTypeOrganization();
+msj += "El nombre legal es:" + getLegalName()+ "\n";
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
-msj += "El nombre legal es:" + getLegalName();
-msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
-msj += "El promedio de las encuestas es:" + promediateOfThis();
+msj += "El promedio de las encuestas es:" + promediateOfThis()+ "\n";
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
 
 return msj;

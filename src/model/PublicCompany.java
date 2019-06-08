@@ -47,15 +47,15 @@ public String toString(){
 String msj = "";
 
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
-msj += super.toString();
+msj += super.toString() + "\n";
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
-msj += "El servicio publico es:" + servicePublic;
+msj += "El servicio publico es:" + servicePublic + "\n";
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
-msj += "El total de suscriptores es:" + suscriptorsTotally;
+msj += "El total de suscriptores es:" + suscriptorsTotally + "\n";
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
-msj += "La cantidad de suscriptores uno y dos es:" +suscriptorsOneAndTwo;
+msj += "La cantidad de suscriptores uno y dos es:" +suscriptorsOneAndTwo + "\n";
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
-msj += "El impuesto proCultura es:" + calculatedProCultura();
+msj += "El impuesto proCultura es:" + calculatedProCultura() + "\n";
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
 
 return msj;

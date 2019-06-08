@@ -95,25 +95,25 @@ public String toString(){
 String msj = "";
 
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
-msj += super.toString();
+msj += super.toString() + "\n";
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
-msj += "El numero de registro es:" + numberRegistrationMEN;
+msj += "El numero de registro es:" + numberRegistrationMEN + "\n";
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
-msj += "Los años de acreditacion es:" + numberYearsAcreditation;
+msj += "Los años de acreditacion es:" + numberYearsAcreditation + "\n";
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
-msj += "El puesto en las pruebas 11 es:" + nationalPositionSaber11;
+msj += "El puesto en las pruebas 11 es:" + nationalPositionSaber11 + "\n";
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
-msj += "El puesto de las pruebas Pro es:" + nationalPositionSaberPro;
+msj += "El puesto de las pruebas Pro es:" + nationalPositionSaberPro + "\n";
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
-msj += "El nombre del rector es:" +rectorName;
+msj += "El nombre del rector es:" +rectorName + "\n";
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
-msj += "El sector educativo es:" + educativeSector;
+msj += "El sector educativo es:" + educativeSector + "\n";
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
-msj += "El numero de estudiantes en estratos uno y dos son:" + amountStudentsStratum1and2;
+msj += "El numero de estudiantes en estratos uno y dos son:" + amountStudentsStratum1and2 + "\n";
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
-msj += "El numero de total de estudiantes es:" +totalAmountActivesStudent;
+msj += "El numero de total de estudiantes es:" +totalAmountActivesStudent + "\n";
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
-msj += "El impuesto de procultura es:" + calculatedProCultura();
+msj += "El impuesto de procultura es:" + calculatedProCultura() + "\n";
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
 
 

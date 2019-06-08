@@ -40,9 +40,13 @@ public String toString(){
 
 String msj = "";
 
-msj += "El servicio hecho es :" + serviceDoIt;
-msj += "El tiempo de respuesta es:" + answerTime;
-msj += "El costo de relacion por beneficio es:" + relationCostXBenefit;
+msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
+msj += "El servicio hecho es :" + serviceDoIt + "\n";
+msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
+msj += "El tiempo de respuesta es:" + answerTime + "\n";
+msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
+msj += "El costo de relacion por beneficio es:" + relationCostXBenefit + "\n";
+msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
 
 return msj;
 
