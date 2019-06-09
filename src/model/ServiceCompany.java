@@ -62,6 +62,15 @@ msj += "El nombre legal es:" + getLegalName()+ "\n";
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
 msj += "El promedio de las encuestas es:" + promediateFinal()+ "\n";
 msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
+msj += "El promedio de las encuestas de 50" + promediateFinal1() + "\n";
+msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
+
+for(int k = 0; k < polls.size();k++){
+msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
+msj += polls.get(k).toString1();
+msj += "---------------------------------------------------------------------------------------------------------------------------- \n";
+
+}
 
 return msj;
 
@@ -72,7 +81,7 @@ public int promediateOfThis(){
 
 int ser = 0;
 for(int i = 0; i < polls.size();i++){
-  ser = polls.get(i).getServiceDoIt();
+  ser += polls.get(i).getServiceDoIt();
 
 }
 return ser;
@@ -83,7 +92,7 @@ public int promediateOfThis1(){
 
 int ans = 0;
 for(int i = 0; i < polls.size();i++){
-  ans = polls.get(i).getAnswerTime();
+  ans += polls.get(i).getAnswerTime();
 
 }
 return ans;
@@ -94,7 +103,7 @@ public int promediateOfThis2(){
 
 int rela = 0;
 for(int i = 0; i < polls.size();i++){
-  rela = polls.get(i).getRelationCostXBenefit();
+  rela += polls.get(i).getRelationCostXBenefit();
 }
 return rela;
 
@@ -107,6 +116,17 @@ public int promediateFinal(){
   finalPolls = (promediateOfThis() + promediateOfThis1() + promediateOfThis2()) / 10;
 
   return finalPolls;
+
+
+}
+
+public int promediateFinal1(){
+
+int finalPolls1 = 0;
+
+finalPolls1 = (promediateOfThis() + promediateOfThis1() + promediateOfThis2()) / 50;
+
+return finalPolls1;
 
 
 }

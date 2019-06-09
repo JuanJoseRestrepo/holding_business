@@ -102,8 +102,8 @@ public void showMenu(){
         System.out.println("CONSTRUCCION:" + Company.CONSTRUCTION);
         System.out.println("COMERCIO AL POR MAYOR Y AL POR MENOR:" + Company.COMERCY_MM);
         System.out.println("TRANSPORTE, ALMACENAMIENTO Y COMUNICACIONES:" + Company.TRANSPORTATION_A_C);
-        System.out.println("EST.F/CIEROS,SEGUROS,B.INMUEBLES,SERV. A COMPANIAS" + Company.SECURE_INMU_COM);
-        System.out.println("COMUNALES, SOCIALES" + Company.SOCI_COM);
+        System.out.println("EST.F/CIEROS,SEGUROS,B.INMUEBLES,SERV. A COMPANIAS:" + Company.SECURE_INMU_COM);
+        System.out.println("COMUNALES, SOCIALES:" + Company.SOCI_COM);
         char typeOrganization1 = reader.nextLine().charAt(0);
 
         System.out.println("Digite el nombre legal");
@@ -232,7 +232,7 @@ public void showMenu(){
         System.out.println("COMERCIO AL POR MAYOR Y AL POR MENOR:" + Company.COMERCY_MM);
         System.out.println("TRANSPORTE, ALMACENAMIENTO Y COMUNICACIONES:" + Company.TRANSPORTATION_A_C);
         System.out.println("EST.F/CIEROS,SEGUROS,B.INMUEBLES,SERV. A COMPANIAS:" + Company.SECURE_INMU_COM);
-        System.out.println("COMUNALES, SOCIALES" + Company.SOCI_COM);
+        System.out.println("COMUNALES, SOCIALES:" + Company.SOCI_COM);
         char typeOrganization2 = reader.nextLine().charAt(0);
 
         System.out.println("Digite el nombre legal");
@@ -338,14 +338,14 @@ public void showMenu(){
         System.out.println("CONSTRUCCION:" + Company.CONSTRUCTION);
         System.out.println("COMERCIO AL POR MAYOR Y AL POR MENOR:" + Company.COMERCY_MM);
         System.out.println("TRANSPORTE, ALMACENAMIENTO Y COMUNICACIONES:" + Company.TRANSPORTATION_A_C);
-        System.out.println("EST.F/CIEROS,SEGUROS,B.INMUEBLES,SERV. A COMPANIAS" + Company.SECURE_INMU_COM);
-        System.out.println("COMUNALES, SOCIALES" + Company.SOCI_COM);
+        System.out.println("EST.F/CIEROS,SEGUROS,B.INMUEBLES,SERV. A COMPANIAS:" + Company.SECURE_INMU_COM);
+        System.out.println("COMUNALES, SOCIALES:" + Company.SOCI_COM);
         char typeOrganization3 = reader.nextLine().charAt(0);
 
         System.out.println("Digite el nombre legal");
         String legalName3 = reader.nextLine();
 
-		System.out.println("Digite el servicio de la empresa publica" + PublicCompany.SAWAGE_SYSTEM + "" + PublicCompany.ENERGY + "" + PublicCompany.AQUEDUCT);
+		System.out.println("Digite el servicio de la empresa publica:" + "//" + PublicCompany.SAWAGE_SYSTEM + "//" + PublicCompany.ENERGY + "//" + PublicCompany.AQUEDUCT);
 		String namePublic = reader.nextLine();
 
 		System.out.println("Digite la cantidad de suscriptores total");
@@ -447,8 +447,8 @@ public void showMenu(){
         System.out.println("CONSTRUCCION:" + Company.CONSTRUCTION);
         System.out.println("COMERCIO AL POR MAYOR Y AL POR MENOR:" + Company.COMERCY_MM);
         System.out.println("TRANSPORTE, ALMACENAMIENTO Y COMUNICACIONES:" + Company.TRANSPORTATION_A_C);
-        System.out.println("EST.F/CIEROS,SEGUROS,B.INMUEBLES,SERV. A COMPANIAS" + Company.SECURE_INMU_COM);
-        System.out.println("COMUNALES, SOCIALES" + Company.SOCI_COM);
+        System.out.println("EST.F/CIEROS,SEGUROS,B.INMUEBLES,SERV. A COMPANIAS:" + Company.SECURE_INMU_COM);
+        System.out.println("COMUNALES, SOCIALES:" + Company.SOCI_COM);
         char typeOrganization4 = reader.nextLine().charAt(0);
 
         System.out.println("Digite el nombre legal");
@@ -533,8 +533,8 @@ public void showMenu(){
         System.out.println("CONSTRUCCION:" + Company.CONSTRUCTION);
         System.out.println("COMERCIO AL POR MAYOR Y AL POR MENOR:" + Company.COMERCY_MM);
         System.out.println("TRANSPORTE, ALMACENAMIENTO Y COMUNICACIONES:" + Company.TRANSPORTATION_A_C);
-        System.out.println("EST.F/CIEROS,SEGUROS,B.INMUEBLES,SERV. A COMPANIAS" + Company.SECURE_INMU_COM);
-        System.out.println("COMUNALES, SOCIALES" + Company.SOCI_COM);
+        System.out.println("EST.F/CIEROS,SEGUROS,B.INMUEBLES,SERV. A COMPANIAS:" + Company.SECURE_INMU_COM);
+        System.out.println("COMUNALES, SOCIALES:" + Company.SOCI_COM);
         char typeOrganization5 = reader.nextLine().charAt(0);
 
         System.out.println("Digite el nombre legal");
