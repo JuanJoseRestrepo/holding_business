@@ -5,6 +5,8 @@ public class Building{
 private Employeer[][] tower;
 private int numberBuilding;
 
+/**Description: este metodo inicializa los empleados(cubiculos)
+*/
 public void inicializatedCub(){
 for(int i = 0; i < tower.length;i++){
 	for(int j = 0; j < tower[0].length;j++){
@@ -13,21 +15,34 @@ for(int i = 0; i < tower.length;i++){
 }
 }
 
-
+/** Description: Este metodo inicializa las variables
+*@param numberBuilding int el numero de pisos
+*/
 public Building(int numberBuilding){
 this.numberBuilding = numberBuilding;
 tower = new Employeer[numberBuilding][20];
 inicializatedCub();
 }
 
+/** Description: Este metodo obtiene el cubiculo
+*@return Employer la torre
+*/
 public Employeer[][] getEmployeer(){
 	return tower;
 }
 
+/** Description: Este metodo estable el cubiculo
+*@param tower Employeer el edificio
+*/
 public void setEmployeer(Employeer[][] tower){
 	this.tower = tower;
 }
 
+/**Description: Este metodo asigna un empleado en un cubiculo
+*@param nameEm String el nombre del empleado
+*@param positionEm String el cargo del empleado
+*@param emailEm String el email del empleado
+*/
 public void assigTheEmploInCub(String nameEm, String positionEm, String emailEm){
 
 boolean t = false;
@@ -44,6 +59,10 @@ boolean t = false;
 	}
 }
 
+/** Description: Este metodo hace el recorrido en L de la matriz
+*@param nameEmpleado String el nombre del empleado
+*@return String el nombre del empleado
+*/
 public String recorridoL(String nameEmpleado){
 String msj = "";
 int k = 0;
@@ -74,7 +93,10 @@ return msj;
 
 }
 
-
+/** Description: Este metodo hace el recorrido en Z de la matriz
+*@param nombreEmpleado String el nombre del empleado
+*@return String el nombre del empleado
+*/
 public String recorridoZ(String nombreEmpleado){
 
 String msj = "";
@@ -100,7 +122,10 @@ for(int j= 1; j < tower.length; j++){
 return msj;
 }
 
-
+/** Description: Este metodo hace el recorrido en X de la matriz
+*@param nombreEmpleado String el nombre del empleado
+*@return String el nombre del empleado
+*/
 public String espiralXfila(String nombreEmpleado){
 String msj ="";
 
@@ -123,6 +148,10 @@ String msj ="";
 return msj;
 }
 
+/** Description: Este metodo hace el recorrido en E de la matriz
+*@param nombreEmpleado String el nombre del empleado
+*@return String el nombre del empleado
+*/
 public String espiralE(String nombreEmpleado){
 String msj = "";
 int m = 0;
@@ -153,6 +182,10 @@ for(int i = 0; i < tower.length;i+= 2){
 		return msj;
 }
 
+/** Description: Este metodo hace el recorrido en O de la matriz
+*@param nombreEmpleado String el nombre del empleado
+*@return String el nombre del empleado
+*/
 public String espiralO(String nombreEmpleado){
 String msj = "";
 
@@ -179,6 +212,10 @@ return msj;
 
 }
 
+/** Description: Este metodo hace el recorrido en espiral de la matriz
+*@param cargo String el nombre del empleado
+*@return String el cargo del empleado
+*/
 public String espiral(String cargo){
 
 	String msj = "";
@@ -220,14 +257,5 @@ public String espiral(String cargo){
 	}
  return msj;
 }
-
-
-
-
-
-
-
-
-
 
 }
